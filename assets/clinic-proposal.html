@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinic Website Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --teal: #0E7C7B;
+    --teal-light: #12A09F;
+    --gold: #C9A84C;
+    --gold-light: #E2C97E;
+    --cream: #FAF8F3;
+    --white: #FFFFFF;
+    --gray: #6B7280;
+    --light-gray: #F1F0ED;
+    --border: #E2DDD5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─── PAGE SHELL ─── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 60px rgba(11,31,58,.10);
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: var(--navy);
+    padding: 48px 56px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,.18);
+    top: -120px; right: -80px;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,.10);
+    top: -40px; right: 40px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .agency-badge {
+    background: rgba(201,168,76,.15);
+    border: 1px solid rgba(201,168,76,.35);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .doc-meta {
+    text-align: right;
+    color: rgba(255,255,255,.45);
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .doc-meta strong { color: rgba(255,255,255,.75); }
+
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .header-title em { color: var(--gold-light); font-style: italic; }
+  .header-sub {
+    color: rgba(255,255,255,.55);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .02em;
+  }
+  .gold-line {
+    width: 56px; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 20px 0 0;
+  }
+
+  /* ─── BODY SECTIONS ─── */
+  .body { padding: 0 56px 56px; }
+
+  .section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 18px;
+  }
+
+  /* ─── INTRO ─── */
+  .intro-text {
+    color: #374151;
+    font-size: 14.5px;
+    line-height: 1.8;
+    max-width: 740px;
+  }
+  .intro-text strong { color: var(--navy); }
+
+  /* ─── FEATURES GRID ─── */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 4px;
+  }
+  .feature-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    position: relative;
+  }
+  .feature-icon {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .feature-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+  .feature-card p {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.55;
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline { display: flex; gap: 0; margin-top: 4px; }
+  .timeline-step {
+    flex: 1;
+    position: relative;
+  }
+  .timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 18px; left: calc(50% + 22px);
+    right: -50%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--teal-light), var(--border));
+  }
+  .step-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+    position: relative; z-index: 1;
+  }
+  .step-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .step-days {
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray);
+  }
+
+  /* ─── PRICING ─── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .pkg {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    transition: transform .2s;
+  }
+  .pkg:hover { transform: translateY(-3px); }
+  .pkg.featured {
+    border-color: var(--gold);
+    box-shadow: 0 8px 32px rgba(201,168,76,.18);
+  }
+  .pkg-header {
+    padding: 18px 20px 14px;
+    background: var(--light-gray);
+  }
+  .pkg.featured .pkg-header {
+    background: var(--navy);
+  }
+  .pkg-badge {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(201,168,76,.15);
+    color: var(--gold);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .pkg-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .pkg.featured .pkg-name { color: var(--white); }
+  .pkg-tagline { font-size: 11px; color: var(--gray); }
+  .pkg.featured .pkg-tagline { color: rgba(255,255,255,.55); }
+  .pkg-pricing {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+  .pkg.featured .pkg-pricing { border-bottom-color: rgba(201,168,76,.2); }
+  .setup-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .setup-label {
+    font-size: 11px;
+    color: var(--gray);
+    margin-bottom: 6px;
+  }
+  .monthly-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--teal);
+  }
+  .monthly-label { font-size: 11px; color: var(--gray); }
+  .delivery-time {
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .pkg-features {
+    padding: 16px 20px;
+    background: var(--white);
+  }
+  .pkg-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #374151;
+  }
+  .pkg-feature:last-child { margin-bottom: 0; }
+  .check {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .popular-tag {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+  }
+
+  /* ─── SUPPORT & HOSTING ─── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .info-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--cream);
+  }
+  .info-card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .info-card-icon {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .info-list { list-style: none; }
+  .info-list li {
+    font-size: 12px;
+    color: #374151;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .info-list li:last-child { border-bottom: none; }
+  .info-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    background: var(--navy);
+    margin: 0 -56px;
+    padding: 36px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .cta-left h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .cta-left p { font-size: 13px; color: rgba(255,255,255,.5); }
+  .cta-btn {
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+  }
+  .cta-contact {
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+    margin-top: 6px;
+    text-align: center;
+  }
+  .cta-contact strong { color: rgba(255,255,255,.7); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 20px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    background: var(--cream);
+  }
+  footer p { font-size: 11px; color: var(--gray); }
+  footer strong { color: var(--navy); }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; }
+    .pkg:hover { transform: none; }
+  }
+
+  @media (max-width: 700px) {
+    header, .body { padding-left: 24px; padding-right: 24px; }
+    .features-grid, .pricing-grid, .info-grid { grid-template-columns: 1fr; }
+    .timeline { flex-direction: column; gap: 16px; }
+    .timeline-step::after { display: none; }
+    .cta-section { flex-direction: column; margin: 0 -24px; padding: 30px 24px; }
+    .header-title { font-size: 28px; }
+    footer { padding: 16px 24px; flex-direction: column; gap: 6px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <span class="agency-badge">✦ Website Proposal</span>
+      <div class="doc-meta">
+        <div>Prepared for: <strong>Healthcare Clinics</strong></div>
+      </div>
+    </div>
+    <div class="header-title">
+      Your Clinic, <em>Online</em><br>& Growing.
+    </div>
+    <div class="header-sub">A tailored digital presence proposal — website, SEO, WhatsApp & more</div>
+    <div class="gold-line"></div>
+  </header>
+
+  <div class="body">
+
+    <!-- INTRO -->
+    <div class="section">
+      <div class="section-label">Overview</div>
+      <div class="section-title">Why Your Clinic Needs a Professional Website</div>
+      <p class="intro-text">
+        Today, <strong>over 70% of patients search online</strong> before booking a clinic appointment. A professional website builds instant trust, lets patients book directly, and puts your clinic at the top of local Google searches. We specialise in websites for healthcare clinics — fast, mobile-friendly, and built to convert visitors into booked appointments. Below are three packages tailored to different growth stages. <strong>All packages include a 1-year warranty and dedicated support.</strong>
+      </p>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="section">
+      <div class="section-label">What You Get</div>
+      <div class="section-title">Core Features Across All Packages</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">📱</span>
+          <h4>Mobile-First Design</h4>
+          <p>Responsive layout that looks flawless on every phone, tablet, and desktop.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💬</span>
+          <h4>WhatsApp Integration</h4>
+          <p>One-click WhatsApp button for instant patient inquiries and appointment booking.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔍</span>
+          <h4>SEO Optimised</h4>
+          <p>On-page SEO, local keywords, Google-ready structure to rank for nearby searches.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🏥</span>
+          <h4>Services Showcase</h4>
+          <p>Dedicated pages for each treatment and specialty offered at your clinic.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⭐</span>
+          <h4>Patient Reviews</h4>
+          <p>Display Google reviews and testimonials to build credibility with new patients.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🗺️</span>
+          <h4>Google Maps Embed</h4>
+          <p>Interactive map, directions, and clinic hours so patients find you easily.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h4>SSL Security</h4>
+          <p>Free SSL certificate included — your site will show as secure in all browsers.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">⚡</span>
+          <h4>Fast Loading</h4>
+          <p>Optimised images and code ensure your site loads in under 3 seconds.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- PRICING -->
+    <div class="section">
+      <div class="section-label">Pricing</div>
+      <div class="section-title">Choose the Right Package for Your Clinic</div>
+      <div class="pricing-grid">
+
+        <!-- Basic -->
+        <div class="pkg">
+          <div class="pkg-header">
+            <div class="pkg-name">Basic</div>
+            <div class="pkg-tagline">Essential Digital Presence</div>
+          </div>
+          <div class="pkg-pricing">
+            <div class="setup-label">One-time setup</div>
+            <div class="setup-price">₹12,999</div>
+            <div style="height:8px;"></div>
+            <div class="monthly-label">Monthly maintenance</div>
+            <div class="monthly-price">₹1,999 / mo</div>
+            <div class="delivery-time">Delivery time: 3–5 days</div>
+          </div>
+          <div class="pkg-features">
+            <div class="pkg-feature"><span class="check">✓</span>Professional Website (3–5 pages)</div>
+            <div class="pkg-feature"><span class="check">✓</span>Mobile Responsive Design</div>
+            <div class="pkg-feature"><span class="check">✓</span>WhatsApp Chat Button</div>
+            <div class="pkg-feature"><span class="check">✓</span>1-Year Hosting Included</div>
+            <div class="pkg-feature"><span class="check">✓</span>SSL Certificate</div>
+            <div class="pkg-feature"><span class="check">✓</span>Contact Form & Google Maps</div>
+            <div class="pkg-feature"><span class="check">✓</span>Basic On-Page SEO</div>
+            <div class="pkg-feature"><span class="check">✓</span>Monthly Content Updates</div>
+          </div>
+        </div>
+
+        <!-- Standard — FEATURED -->
+        <div class="pkg featured">
+          <div class="popular-tag">⭐ Most Popular</div>
+          <div class="pkg-header">
+            <div class="pkg-badge">Recommended</div>
+            <div class="pkg-name">Standard</div>
+            <div class="pkg-tagline">Growth & Visibility</div>
+          </div>
+          <div class="pkg-pricing">
+            <div class="setup-label">One-time setup</div>
+            <div class="setup-price" style="color:var(--gold);">₹19,999</div>
+            <div style="height:8px;"></div>
+            <div class="monthly-label">Monthly maintenance</div>
+            <div class="monthly-price">₹3,999 / mo</div>
+            <div class="delivery-time">Delivery time: 5–7 days</div>
+          </div>
+          <div class="pkg-features">
+            <div class="pkg-feature"><span class="check">✓</span>Everything in Basic</div>
+            <div class="pkg-feature"><span class="check">✓</span>Google Business Profile Setup</div>
+            <div class="pkg-feature"><span class="check">✓</span>Advanced Local SEO</div>
+            <div class="pkg-feature"><span class="check">✓</span>Google Maps Ranking</div>
+            <div class="pkg-feature"><span class="check">✓</span>Monthly SEO Report</div>
+            <div class="pkg-feature"><span class="check">✓</span>Review Management</div>
+            <div class="pkg-feature"><span class="check">✓</span>2× Monthly Blog Posts</div>
+            <div class="pkg-feature"><span class="check">✓</span>Priority Support</div>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="pkg">
+          <div class="pkg-header">
+            <div class="pkg-name">Premium</div>
+            <div class="pkg-tagline">Full Premium Suite</div>
+          </div>
+          <div class="pkg-pricing">
+            <div class="setup-label">One-time setup</div>
+            <div class="setup-price">₹29,999</div>
+            <div style="height:8px;"></div>
+            <div class="monthly-label">Monthly maintenance</div>
+            <div class="monthly-price">₹5,999 / mo</div>
+            <div class="delivery-time">Delivery time: 7–10 days</div>
+          </div>
+          <div class="pkg-features">
+            <div class="pkg-feature"><span class="check">✓</span>Everything in Standard</div>
+            <div class="pkg-feature"><span class="check">✓</span>Online Appointment Booking</div>
+            <div class="pkg-feature"><span class="check">✓</span>WhatsApp Auto-Replies</div>
+            <div class="pkg-feature"><span class="check">✓</span>Social Media Integration</div>
+            <div class="pkg-feature"><span class="check">✓</span>Custom Email (clinic@yourdomain)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SUPPORT & HOSTING -->
+    <div class="section">
+      <div class="section-label">Support & Hosting</div>
+      <div class="section-title">We Handle Everything, So You Don't Have To</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-title">
+            <div class="info-card-icon">🖥️</div>
+            Hosting & Security
+          </div>
+          <ul class="info-list">
+            <li>High-speed cloud hosting included in all plans</li>
+            <li>Free SSL certificate (https secure site)</li>
+            <li>99.9% uptime guarantee</li>
+            <li>Daily automated backups</li>
+            <li>Malware & security monitoring</li>
+            <li>Domain setup assistance</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">
+            <div class="info-card-icon">🤝</div>
+            Ongoing Support
+          </div>
+          <ul class="info-list">
+            <li>WhatsApp support — reply within 4 hours</li>
+            <li>Monthly content & image updates</li>
+            <li>Bug fixes at no extra charge</li>
+            <li>1-year warranty on all work done</li>
+            <li>Free minor design tweaks each month (Included in Monthly Maintenance Package)</li>
+            <li>Annual performance review call</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">
+            <div class="info-card-icon">🔍</div>
+            SEO & Google
+          </div>
+          <ul class="info-list">
+            <li>Keyword research for local healthcare terms</li>
+            <li>Google Search Console setup</li>
+            <li>Sitemap & schema markup included</li>
+            <li>Google Business Profile optimisation (Standard and Premium)</li>
+            <li>Monthly ranking reports (Standard and Premium)</li>
+            <li>Local citation building (Premium)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">
+            <div class="info-card-icon">💬</div>
+            WhatsApp Integration
+          </div>
+          <ul class="info-list">
+            <li>Click-to-chat button on every page</li>
+            <li>Pre-filled appointment message template</li>
+            <li>Floating button on mobile for easy access</li>
+            <li>WhatsApp auto-replies (Premium only)</li>
+            <li>Multiple doctor numbers supported</li>
+            <li>Patient inquiry tracking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="section" style="border:none; padding-bottom:0;">
+      <div class="cta-section">
+        <div class="cta-left">
+          <h3>Ready to Get Your Clinic Online?</h3>
+        </div>
+        <div style="text-align:center;">
+          <div class="cta-contact">Call or WhatsApp: <strong>+91 9591020666 <br>+91 9632718157</strong></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <strong>Radhe Web Studio</strong> · All rights reserved</p>
+    <p>Prepared exclusively for <strong>Healthcare Clinics</strong></p>
+  </footer>
+
+</div>
+</body>
+</html>

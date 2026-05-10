@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Radhe Web Studios | WhatsApp, Call & Email</title>
+  <meta name="description" content="Get in touch with Radhe Web Studios via WhatsApp, call or email. We're available 9 AM–8 PM, Mon–Sat. Free consultation for clinic and real estate websites.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Contact Radhe Web Studios">
+  <meta property="og:description" content="Reach us via WhatsApp, call or email for a free website consultation. Fast response guaranteed.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/Images/logo.png">
+  <link rel="icon" type="image/png" href="assets/Images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .contact-card.whatsapp-card { background: linear-gradient(135deg, #1a3d2b, #0f2d1e); border-color: rgba(37,211,102,0.3); }
+    .contact-card.call-card     { background: linear-gradient(135deg, #0a2030, #051520); border-color: rgba(14,124,123,0.3); }
+    .contact-card.email-card    { background: linear-gradient(135deg, #1a1a3a, #0f0f25); border-color: rgba(201,168,76,0.3); }
+    .contact-card.whatsapp-card::before { background: linear-gradient(90deg, transparent, #25D366, transparent); }
+    .contact-card.call-card::before     { background: linear-gradient(90deg, transparent, var(--teal-light), transparent); }
+    .contact-card.email-card::before    { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .contact-card .contact-card-icon.wa-icon  { background: rgba(37,211,102,0.15); color: #25D366; border: 1px solid rgba(37,211,102,0.3); }
+    .contact-card .contact-card-icon.call-icon { background: rgba(14,124,123,0.15); color: var(--teal-light); border: 1px solid rgba(14,124,123,0.3); }
+    .contact-card .contact-card-icon.mail-icon { background: rgba(201,168,76,0.15); color: var(--gold-light); border: 1px solid rgba(201,168,76,0.3); }
+    .contact-card .contact-card-value.wa-val   { color: #25D366; }
+    .contact-card .contact-card-value.call-val { color: var(--teal-light); }
+    .contact-card .contact-card-value.mail-val { color: var(--gold-light); }
+    .contact-card-desc { color: rgba(255,255,255,0.5); font-size:0.88rem; margin-bottom:28px; line-height:1.7; }
+    .map-embed {
+      width: 100%;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.92rem;
+      position: relative;
+    }
+    .map-placeholder-icon { font-size: 3rem; color: var(--gold); opacity: 0.5; }
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.25);
+      color: #25D366;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .response-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #25D366;
+      animation: floatPulse 2s ease-in-out infinite;
+    }
+    @keyframes floatPulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      50%      { box-shadow: 0 0 0 5px rgba(37,211,102,0); }
+    }
+  </style>
+</head>
+<body class="loading">
+
+<div id="page-loader">
+  <img src="assets/Images/logo.png" alt="Radhe Web Studios" class="loader-logo">
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/Images/logo.png" alt="Radhe Web Studios Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+      <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/919632718157" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp Now
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="pricing.html" class="nav-link">Pricing</a>
+  <a href="portfolio.html" class="nav-link">Portfolio</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link active">Contact</a>
+  <a href="https://wa.me/919632718157" class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top:16px;">
+    <i class="fab fa-whatsapp"></i> WhatsApp Now
+  </a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="blob blob-1" style="top:-100px;left:-100px;"></div>
+  <div class="blob blob-2" style="top:0;right:-50px;"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Contact</span>
+    </div>
+    <div class="section-label" style="justify-content:center;">Let's Talk</div>
+    <h1 class="page-hero-title">Get In <span class="gradient-text">Touch</span></h1>
+    <p class="page-hero-subtitle">We're one WhatsApp message away. No contact forms — just real, fast human conversation.</p>
+    <div style="display:flex;justify-content:center;margin-top:20px;">
+      <span class="response-badge"><span class="dot"></span> Typically replies within 2 hours</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="section-py" style="background:var(--darker-bg);">
+  <div class="container">
+    <div class="contact-cards">
+
+      <!-- WhatsApp Card -->
+      <div class="contact-card whatsapp-card reveal">
+        <div class="contact-card-icon wa-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="contact-card-title">WhatsApp Us</div>
+        <div class="contact-card-value wa-val">+91 96327 18157</div>
+        <p class="contact-card-desc">The fastest way to reach us. Share your requirements, get a free quote, ask questions, or simply say hello. We respond within 2 hours.</p>
+        <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20would%20like%20to%20discuss%20building%20a%20website%20for%20my%20business." class="btn btn-whatsapp w-full" style="justify-content:center;font-size:1rem;padding:15px;" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
+        </a>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+          <a href="https://wa.me/919632718157?text=Hi%2C%20I%20need%20a%20website%20for%20my%20clinic." class="btn btn-outline-gold btn-sm w-full" style="justify-content:center;" target="_blank" rel="noopener">
+            <i class="fas fa-stethoscope"></i> I need a Clinic Website
+          </a>
+          <a href="https://wa.me/919632718157?text=Hi%2C%20I%20need%20a%20website%20for%20my%20real%20estate%20business." class="btn btn-outline-gold btn-sm w-full" style="justify-content:center;" target="_blank" rel="noopener">
+            <i class="fas fa-building"></i> I need a Real Estate Website
+          </a>
+        </div>
+      </div>
+
+      <!-- Call Card -->
+      <div class="contact-card call-card reveal reveal-delay-1">
+        <div class="contact-card-icon call-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="contact-card-title">Call Us Directly</div>
+        <div class="contact-card-value call-val">+91 96327 18157</div>
+        <p class="contact-card-desc">Prefer to talk? Give us a call. We're available Monday to Saturday, 9 AM to 8 PM IST. No IVR, no waiting — just a real conversation.</p>
+        <a href="tel:+919632718157" class="btn btn-call w-full" style="justify-content:center;font-size:1rem;padding:15px;">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+        <div style="margin-top:20px;padding:16px;background:rgba(14,124,123,0.08);border:1px solid rgba(14,124,123,0.2);border-radius:var(--radius);">
+          <div style="color:var(--teal-light);font-size:0.82rem;font-weight:600;margin-bottom:6px;">
+            <i class="fas fa-clock" style="margin-right:6px;"></i>Call Hours
+          </div>
+          <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.7;">
+            Mon – Sat: 9:00 AM – 8:00 PM IST<br>
+            Sunday: 10:00 AM – 4:00 PM IST
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Card -->
+      <div class="contact-card email-card reveal reveal-delay-2">
+        <div class="contact-card-icon mail-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="contact-card-title">Email Us</div>
+        <div class="contact-card-value mail-val" style="font-size:0.95rem;">sajjan.aaru@gmail.com</div>
+        <p class="contact-card-desc">For detailed project briefs, proposals, or any written communication. We respond to all emails within 24 hours on business days.</p>
+        <a href="mailto:sajjan.aaru@gmail.com?subject=Website%20Inquiry%20—%20Radhe%20Web%20Studios&body=Hi%20Sajjan%2C%0A%0AI%20am%20interested%20in%20getting%20a%20website%20built%20for%20my%20business.%0A%0ABusiness%20Name%3A%0ABusiness%20Type%3A%0ARequirements%3A%0A%0APlease%20get%20in%20touch." class="btn btn-gold w-full" style="justify-content:center;font-size:1rem;padding:15px;">
+          <i class="fas fa-paper-plane"></i> Send an Email
+        </a>
+        <div style="margin-top:20px;padding:16px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:var(--radius);">
+          <div style="color:var(--gold);font-size:0.82rem;font-weight:600;margin-bottom:6px;">
+            <i class="fas fa-info-circle" style="margin-right:6px;"></i>Pro tip
+          </div>
+          <div style="color:rgba(255,255,255,0.55);font-size:0.84rem;line-height:1.7;">
+            For the fastest response, WhatsApp is best. Email is ideal for sharing detailed briefs or documents.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS HOURS -->
+<section class="section-py section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Availability</div>
+      <h2 class="section-title">Business <span class="italic">Hours</span></h2>
+      <p class="section-subtitle">We're available 6 days a week to discuss your project, answer questions, and provide support.</p>
+    </div>
+
+    <div class="hours-grid" style="max-width:800px;margin:0 auto;">
+      <div class="hours-card reveal">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Monday</div>
+        <div class="hours-time">9:00 AM – 8:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal reveal-delay-1">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Tuesday</div>
+        <div class="hours-time">9:00 AM – 8:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Wednesday</div>
+        <div class="hours-time">9:00 AM – 8:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal reveal-delay-1">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Thursday</div>
+        <div class="hours-time">9:00 AM – 8:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Friday</div>
+        <div class="hours-time">9:00 AM – 8:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal reveal-delay-1">
+        <div class="hours-day"><i class="fas fa-sun" style="margin-right:6px;color:var(--gold);"></i>Saturday</div>
+        <div class="hours-time">9:00 AM – 6:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(37,211,102,0.1);color:#25D366;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block;"></span> Open
+        </div>
+      </div>
+      <div class="hours-card reveal">
+        <div class="hours-day"><i class="fas fa-moon" style="margin-right:6px;color:var(--gray);"></i>Sunday</div>
+        <div class="hours-time">10:00 AM – 4:00 PM IST</div>
+        <div style="margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(255,165,0,0.1);color:orange;font-size:0.75rem;font-weight:600;">
+          <span style="width:6px;height:6px;border-radius:50%;background:orange;display:inline-block;"></span> Limited Hours
+        </div>
+      </div>
+      <div class="hours-card reveal reveal-delay-1" style="background:rgba(201,168,76,0.06);border-color:rgba(201,168,76,0.2);">
+        <div class="hours-day" style="color:var(--gold-dark);"><i class="fab fa-whatsapp" style="margin-right:6px;color:#25D366;"></i>WhatsApp Support</div>
+        <div class="hours-time" style="color:var(--navy);font-weight:600;">Always On</div>
+        <div style="margin-top:8px;font-size:0.8rem;color:var(--gray);">Leave a message anytime — we'll respond within 2–4 hours during business hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION + MAP -->
+<section class="section-py" style="background:var(--dark-bg);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Location</div>
+      <h2 class="section-title" style="color:var(--white);">We're Based in <span class="italic" style="color:var(--gold-light);">India</span></h2>
+      <p class="section-subtitle">We work remotely with clients across all of India. No matter your city, we deliver the same premium experience.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:32px;align-items:start;">
+      <div class="reveal">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);border-radius:var(--radius-lg);padding:32px;">
+          <h3 style="color:var(--white);font-size:1.2rem;margin-bottom:24px;font-family:var(--font-serif);">Our Reach</h3>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;align-items:center;gap:14px;padding:14px;background:rgba(255,255,255,0.03);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.05);">
+              <i class="fas fa-map-marker-alt" style="color:var(--gold);font-size:1.1rem;width:20px;text-align:center;flex-shrink:0;"></i>
+              <div>
+                <div style="color:var(--white);font-size:0.9rem;font-weight:600;">Headquartered in India</div>
+                <div style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:2px;">Karnataka, India</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px;background:rgba(255,255,255,0.03);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.05);">
+              <i class="fas fa-globe-asia" style="color:var(--gold);font-size:1.1rem;width:20px;text-align:center;flex-shrink:0;"></i>
+              <div>
+                <div style="color:var(--white);font-size:0.9rem;font-weight:600;">Serving All of India</div>
+                <div style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:2px;">Bangalore, Mumbai, Delhi, Pune, Hyderabad & more</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px;background:rgba(255,255,255,0.03);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.05);">
+              <i class="fas fa-laptop-house" style="color:var(--gold);font-size:1.1rem;width:20px;text-align:center;flex-shrink:0;"></i>
+              <div>
+                <div style="color:var(--white);font-size:0.9rem;font-weight:600;">100% Remote Delivery</div>
+                <div style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:2px;">No physical meeting needed — we work entirely online</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px;background:rgba(255,255,255,0.03);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.05);">
+              <i class="fab fa-whatsapp" style="color:#25D366;font-size:1.1rem;width:20px;text-align:center;flex-shrink:0;"></i>
+              <div>
+                <div style="color:var(--white);font-size:0.9rem;font-weight:600;">WhatsApp First Workflow</div>
+                <div style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:2px;">All project communication via WhatsApp — simple & fast</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:24px;">
+            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20am%20reaching%20out%20for%20a%20website%20consultation." class="btn btn-whatsapp w-full" style="justify-content:center;" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Start a Free Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map embed placeholder -->
+      <div class="reveal reveal-delay-1">
+        <div class="map-embed">
+          <div style="position:absolute;inset:0;background:var(--navy);border-radius:var(--radius-lg);"></div>
+          <div style="position:relative;z-index:1;text-align:center;padding:32px;">
+            <div class="map-placeholder-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;margin:12px 0;">India — Serving clients nationwide</p>
+            <p style="color:rgba(255,255,255,0.35);font-size:0.8rem;margin-bottom:20px;">Karnataka · Bangalore · Mumbai · Pune · Delhi · Hyderabad</p>
+            <a href="https://wa.me/919632718157" class="btn btn-outline-gold" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+            </a>
+          </div>
+          <!-- Decorative dots grid -->
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.06;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="dotGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                <circle cx="15" cy="15" r="1.5" fill="#C9A84C"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dotGrid)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT CTA -->
+<section class="section-py section-navy">
+  <div class="container">
+    <div style="text-align:center;max-width:680px;margin:0 auto;">
+      <div class="section-label" style="justify-content:center;">Still Have Questions?</div>
+      <h2 style="font-family:var(--font-serif);font-size:2.2rem;color:var(--white);margin-bottom:16px;">Choose How You'd Like<br>to <span style="color:var(--gold-light);font-style:italic;">Reach Us</span></h2>
+      <p style="color:rgba(255,255,255,0.55);margin-bottom:40px;line-height:1.8;">No contact forms. No auto-responders. Just real human conversation — the way business should work.</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="https://wa.me/919632718157?text=Hi%2C%20I%20have%20a%20question%20about%20your%20services." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp a Question
+        </a>
+        <a href="tel:+919632718157" class="btn btn-call btn-lg">
+          <i class="fas fa-phone"></i> Call Us Now
+        </a>
+        <a href="mailto:sajjan.aaru@gmail.com" class="btn btn-outline-gold btn-lg">
+          <i class="fas fa-envelope"></i> Send an Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand footer-col">
+        <a href="index.html"><img src="assets/Images/logo.png" alt="Radhe Web Studios" class="logo-img"></a>
+        <p class="footer-desc">Premium websites for clinics and real estate businesses. We build digital presence that generates real leads.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919632718157" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Quick Links</div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="pricing.html" class="footer-link">Pricing</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Contact Methods</div>
+        <div class="footer-links">
+          <a href="https://wa.me/919632718157" class="footer-link" target="_blank" rel="noopener">WhatsApp Chat</a>
+          <a href="tel:+919632718157" class="footer-link">Phone Call</a>
+          <a href="mailto:sajjan.aaru@gmail.com" class="footer-link">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-contact footer-col">
+        <div class="footer-heading">Get In Touch</div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><span><a href="https://wa.me/919632718157" target="_blank" rel="noopener">+91 96327 18157</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919632718157">+91 96327 18157</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:sajjan.aaru@gmail.com">sajjan.aaru@gmail.com</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Karnataka, India</span></div>
+        <div class="footer-whatsapp">
+          <a href="https://wa.me/919632718157" class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <strong>Radhe Web Studios</strong>. All rights reserved. Crafted with ♪ in India.</p>
+      <p class="footer-copy"><a href="seo/sitemap.xml" style="color:rgba(255,255,255,0.3);margin-right:16px;">Sitemap</a><a href="seo/robots.txt" style="color:rgba(255,255,255,0.3);">Robots.txt</a></p>
+      <p class="footer-copy" style="margin-top:10px;">
+        <a href="privacy-policy.html" style="color:rgba(255,255,255,0.45);">Privacy Policy</a>
+        <span style="color:rgba(255,255,255,0.2);margin:0 8px;">|</span>
+        <a href="terms-and-conditions.html" style="color:rgba(255,255,255,0.45);">Terms &amp; Conditions</a>
+        <span style="color:rgba(255,255,255,0.2);margin:0 8px;">|</span>
+        <a href="refund-policy.html" style="color:rgba(255,255,255,0.45);">Refund Policy</a>
+        <span style="color:rgba(255,255,255,0.2);margin:0 8px;">|</span>
+        <a href="disclaimer.html" style="color:rgba(255,255,255,0.45);">Disclaimer</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919632718157" class="float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+919632718157" class="float-call" aria-label="Call"><i class="fas fa-phone"></i></a>
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

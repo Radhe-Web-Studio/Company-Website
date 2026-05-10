@@ -1,0 +1,380 @@
+/* =========================================
+   RADHE WEB STUDIOS — Animations CSS
+   Flute-inspired premium animations
+   ========================================= */
+
+/* ─── PAGE LOAD ─── */
+@keyframes loaderEntrance {
+  0%   {
+    opacity: 0;
+    transform: scale(0.82);
+    filter: drop-shadow(0 0 0px rgba(201,168,76,0));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 22px rgba(201,168,76,0.45));
+  }
+}
+
+@keyframes loaderPulse {
+  0%, 100% {
+    opacity: 0.88;
+    transform: scale(1);
+    filter: drop-shadow(0 0 18px rgba(201,168,76,0.35));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 42px rgba(201,168,76,0.75));
+  }
+}
+
+@keyframes loaderFill {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ─── BLOB FLOAT ─── */
+@keyframes blobFloat {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33%  { transform: translate(30px, -20px) scale(1.06) rotate(2deg); }
+  66%  { transform: translate(-20px, 20px) scale(0.96) rotate(-1deg); }
+  100% { transform: translate(15px, -10px) scale(1.04) rotate(1deg); }
+}
+
+/* ─── SCROLL WHEEL ─── */
+@keyframes scrollWheel {
+  0%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+/* ─── FLOAT PULSE (floating buttons) ─── */
+@keyframes floatPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+  50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.65), 0 0 0 8px rgba(37,211,102,0.06); }
+}
+
+/* ─── MUSIC NOTE FLOAT ─── */
+@keyframes noteFloat {
+  0%   { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.8); }
+  15%  { opacity: 0.6; }
+  85%  { opacity: 0.2; }
+  100% { opacity: 0; transform: translateY(-120px) rotate(25deg) scale(1.2); }
+}
+
+@keyframes noteFloat2 {
+  0%   { opacity: 0; transform: translateY(0) rotate(-10deg) scale(0.9); }
+  20%  { opacity: 0.5; }
+  80%  { opacity: 0.15; }
+  100% { opacity: 0; transform: translateY(-90px) rotate(-30deg) scale(1.1); }
+}
+
+/* ─── FLUTE PATH DRAW ─── */
+@keyframes fluteDraw {
+  0%   { stroke-dashoffset: 1200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fluteGlow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(201,168,76,0.4)); }
+  50%       { filter: drop-shadow(0 0 12px rgba(201,168,76,0.7)); }
+}
+
+@keyframes holeAppear {
+  0%   { opacity: 0; transform: scale(0); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ─── SHIMMER ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 30%,
+    var(--gold) 50%,
+    var(--gold-light) 70%,
+    var(--gold-dark) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── GRADIENT SHIFT ─── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gold {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ─── SCROLL REVEAL BASE STATES ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ─── HERO ENTRY ─── */
+.hero-badge {
+  animation: heroFadeUp 0.8s ease 0.2s both;
+}
+
+.hero-title {
+  animation: heroFadeUp 0.8s ease 0.4s both;
+}
+
+.hero-subtitle {
+  animation: heroFadeUp 0.8s ease 0.6s both;
+}
+
+.hero-actions {
+  animation: heroFadeUp 0.8s ease 0.8s both;
+}
+
+.hero-trust {
+  animation: heroFadeUp 0.8s ease 1s both;
+}
+
+@keyframes heroFadeUp {
+  0%   { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── NAVBAR SHRINK ─── */
+.navbar { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* ─── CARD HOVER LIFT ─── */
+.service-card,
+.niche-card,
+.pricing-card,
+.testimonial-card,
+.value-card,
+.contact-card {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s ease,
+              background 0.35s ease;
+}
+
+/* ─── PORTFOLIO FILTER ANIMATION ─── */
+.portfolio-card {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.portfolio-card.hidden-item {
+  opacity: 0;
+  transform: scale(0.92);
+  pointer-events: none;
+}
+
+/* ─── FLUTE DECORATION ANIMATIONS ─── */
+.flute-decor {
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes fluteFloat {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50%       { transform: translateY(-15px) rotate(-3deg); }
+}
+
+.flute-ornament {
+  animation: fluteFloat 6s ease-in-out infinite;
+}
+
+/* ─── COUNTER ANIMATION ─── */
+.counter {
+  display: inline-block;
+}
+
+/* ─── RIPPLE EFFECT ─── */
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.2);
+  transform: scale(0) translate(-50%, -50%);
+  transform-origin: 0 0;
+}
+
+.ripple-container:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+/* ─── PRICING HIGHLIGHT ─── */
+@keyframes pricingHighlight {
+  0%, 100% { box-shadow: 0 0 0 1px var(--gold), 0 8px 40px rgba(201,168,76,0.18); }
+  50%       { box-shadow: 0 0 0 2px var(--gold), 0 12px 60px rgba(201,168,76,0.32); }
+}
+
+.pricing-card.featured {
+  animation: pricingHighlight 3s ease-in-out infinite;
+}
+
+.pricing-card.featured:hover {
+  animation: none;
+  box-shadow: 0 0 0 2px var(--gold-light), 0 20px 80px rgba(201,168,76,0.4);
+}
+
+/* ─── BUTTON SHINE ─── */
+@keyframes btnShine {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: btnShine 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* ─── STEP HOVER ─── */
+.process-step {
+  transition: transform 0.3s ease;
+}
+.process-step:hover {
+  transform: translateY(-6px);
+}
+
+/* ─── GOLD RING PULSE ─── */
+@keyframes ringPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(201,168,76,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+}
+
+/* ─── SECTION DIVIDER ─── */
+.wave-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
+/* ─── SCROLL TOP BUTTON ─── */
+@keyframes scrollTopIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-top.visible {
+  animation: scrollTopIn 0.3s ease forwards;
+}
+
+/* ─── ABOUT PAGE PARALLAX ─── */
+.parallax {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ─── TOOLTIP ─── */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--border-dark);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

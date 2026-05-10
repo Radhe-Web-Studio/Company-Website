@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow private/internal paths
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/
+
+# Allow important pages
+Allow: /index.html
+Allow: /services.html
+Allow: /pricing.html
+Allow: /portfolio.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /assets/clinic-proposal.html
+Allow: /assets/realestate-proposal.html
+
+# Sitemap location
+Sitemap: https://radhewebstudios.com/seo/sitemap.xml
+
+# Crawl delay (optional - be respectful to crawlers)
+Crawl-delay: 1
