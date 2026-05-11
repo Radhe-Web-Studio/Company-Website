@@ -25,8 +25,14 @@
   <meta name="twitter:title" content="Radhe Web Studio">
   <meta name="twitter:description" content="Premium websites for clinics & real estate businesses in India.">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://radhewebstudios.com/">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/Images/logo.png">
+
+  <!-- Preconnect (speeds up external font/icon CDN) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -35,6 +41,94 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Structured Data: WebSite + LocalBusiness + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Radhe Web Studio",
+        "url": "https://radhewebstudios.com",
+        "description": "Premium website design for clinics and real estate businesses in India."
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Radhe Web Studio",
+        "url": "https://radhewebstudios.com",
+        "telephone": "+91-96327-18157",
+        "email": "sajjan.aaru@gmail.com",
+        "foundingDate": "2026",
+        "description": "Custom website design for clinics and real estate businesses across India. Websites delivered in 3–7 days with WhatsApp integration, local SEO, and a 1-year bug-fix warranty.",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "serviceType": [
+          "Clinic Website Design",
+          "Real Estate Website Design",
+          "Landing Page Design",
+          "Local SEO",
+          "WhatsApp Integration",
+          "Website Hosting & Maintenance"
+        ],
+        "priceRange": "₹12,999 – ₹29,999",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Design Packages",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Starter Package", "price": "12999", "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Growth Package",  "price": "19999", "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Premium Package", "price": "29999", "priceCurrency": "INR" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does it take to build my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most websites are delivered in 3–7 working days from design approval. The Starter package takes 3–5 days, Growth takes 5–7 days, and the Premium package takes 7–10 days. We work fast without compromising quality."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to know anything technical to get started?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not at all! We handle everything — from design and development to domain setup, hosting, and WhatsApp integration. You just need to tell us about your business and we take care of the rest."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my website appear on Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Every website we build is SEO-optimised with proper meta tags, structured data, sitemaps, and Google Search Console setup. Growth and Premium packages include full Local SEO with Google Business Profile optimisation to help you rank in your city."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after the website is launched?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project comes with a 1-year bug-fix warranty — if anything breaks or has a technical issue, we fix it free of charge. For content updates, new pages, or feature additions, those are covered under our monthly maintenance packages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I see examples of your work before deciding?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! You can see live demos of clinic and real estate websites on our portfolio page. You can also WhatsApp us and we'll share specific examples in your niche."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="loading">
@@ -328,14 +422,14 @@
       <div class="portfolio-grid">
         <!-- Clinic demos -->
         <div class="portfolio-card" data-category="clinic">
-          <img src="assets/Images/portfolio/Dental%20Clinic.png" alt="Dental Clinic Website Demo" class="portfolio-img">
+          <img src="assets/Images/portfolio/Dental%20Clinic.png" alt="Dental Clinic Website Demo" class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Clinic</span>
             <h4 class="portfolio-title">Dental Clinic Website Demo</h4>
           </div>
         </div>
         <div class="portfolio-card" data-category="clinic">
-          <img src="assets/Images/portfolio/Skin%20Clinic.png" alt="Skin Clinic Website Demo" class="portfolio-img">
+          <img src="assets/Images/portfolio/Skin%20Clinic.png" alt="Skin Clinic Website Demo" class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Clinic</span>
             <h4 class="portfolio-title">Skin Clinic Website Demo</h4>
@@ -343,7 +437,7 @@
         </div>
         <div class="portfolio-card" data-category="clinic">
           <img src="assets/Images/portfolio/PhysioTherapy%20clinic%20.png" alt="Physiotherapy Clinic Demo"
-            class="portfolio-img">
+            class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Clinic</span>
             <h4 class="portfolio-title">Physiotherapy Clinic Demo</h4>
@@ -353,7 +447,7 @@
         <!-- Real Estate demos -->
         <div class="portfolio-card" data-category="realestate">
           <img src="assets/Images/portfolio/Apartment%20Project.png" alt="Apartment Project Landing Page Demo"
-            class="portfolio-img">
+            class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Real Estate</span>
             <h4 class="portfolio-title">Apartment Project Landing Page Demo</h4>
@@ -361,7 +455,7 @@
         </div>
         <div class="portfolio-card" data-category="realestate">
           <img src="assets/Images/portfolio/Builder%20Comapny.png" alt="Builder Company Website Demo"
-            class="portfolio-img">
+            class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Real Estate</span>
             <h4 class="portfolio-title">Builder Company Website Demo</h4>
@@ -369,7 +463,7 @@
         </div>
         <div class="portfolio-card" data-category="realestate">
           <img src="assets/Images/portfolio/Real%20Estate%20Agent.png" alt="Real Estate Agent Website Demo"
-            class="portfolio-img">
+            class="portfolio-img" loading="lazy">
           <div class="portfolio-overlay">
             <span class="portfolio-tag">Real Estate</span>
             <h4 class="portfolio-title">Real Estate Agent Website Demo</h4>
@@ -424,7 +518,7 @@
             </div>
           </div>
           <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20am%20interested%20in%20the%20Starter%20package."
+            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Starter%20package."
               class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i> Get Started
             </a>
@@ -457,7 +551,7 @@
             </div>
           </div>
           <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20am%20interested%20in%20the%20Growth%20package."
+            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Growth%20package."
               class="btn btn-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i> Get Started
             </a>
@@ -492,7 +586,7 @@
             </div>
           </div>
           <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20am%20interested%20in%20the%20Premium%20package."
+            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Premium%20package."
               class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i> Get Started
             </a>
@@ -791,7 +885,7 @@
       <p class="cta-subtitle">Be among our founding clients. Get a premium, conversion-focused website — built fast,
         backed by a full-year warranty.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20would%20like%20a%20free%20website%20consultation."
+        <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20would%20like%20a%20free%20website%20consultation."
           class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i> WhatsApp Now — It's Free
         </a>
@@ -866,7 +960,7 @@
             <span>India (Serving clients nationwide)</span>
           </div>
           <div class="footer-whatsapp">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studios%2C%20I%20need%20a%20website."
+            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20need%20a%20website."
               class="btn btn-whatsapp" style="width:100%;justify-content:center;" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
