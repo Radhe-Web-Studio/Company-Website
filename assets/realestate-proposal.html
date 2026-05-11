@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Estate Website Proposal</title>
+<title>Real Estate Website Proposal — Radhe Web Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -29,6 +29,7 @@
     line-height: 1.6;
   }
 
+  /* ─── PAGE SHELL ─── */
   .page {
     max-width: 900px;
     margin: 0 auto;
@@ -36,6 +37,7 @@
     box-shadow: 0 0 60px rgba(11,31,58,.10);
   }
 
+  /* ─── HEADER ─── */
   header {
     background: var(--navy);
     padding: 48px 56px 40px;
@@ -82,7 +84,6 @@
     line-height: 1.8;
   }
   .doc-meta strong { color: rgba(255,255,255,.75); }
-
   .header-title {
     font-family: 'Playfair Display', serif;
     font-size: 38px;
@@ -104,11 +105,10 @@
     margin: 20px 0 0;
   }
 
+  /* ─── BODY SECTIONS ─── */
   .body { padding: 0 56px 56px; }
-
   .section { padding: 40px 0; border-bottom: 1px solid var(--border); }
   .section:last-child { border-bottom: none; }
-
   .section-label {
     font-size: 10px;
     font-weight: 600;
@@ -125,6 +125,7 @@
     margin-bottom: 18px;
   }
 
+  /* ─── INTRO ─── */
   .intro-text {
     color: #374151;
     font-size: 14.5px;
@@ -133,6 +134,7 @@
   }
   .intro-text strong { color: var(--navy); }
 
+  /* ─── FEATURES GRID ─── */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -144,7 +146,6 @@
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 18px 16px;
-    position: relative;
   }
   .feature-icon {
     font-size: 20px;
@@ -163,6 +164,7 @@
     line-height: 1.55;
   }
 
+  /* ─── PRICING ─── */
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,9 +186,7 @@
     padding: 18px 20px 14px;
     background: var(--light-gray);
   }
-  .pkg.featured .pkg-header {
-    background: var(--navy);
-  }
+  .pkg.featured .pkg-header { background: var(--navy); }
   .pkg-badge {
     font-size: 10px;
     font-weight: 600;
@@ -215,11 +215,12 @@
     background: var(--white);
   }
   .pkg.featured .pkg-pricing { border-bottom-color: rgba(201,168,76,.2); }
-  .setup-price {
+  .price-range {
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--navy);
+    line-height: 1.2;
   }
   .setup-label {
     font-size: 11px;
@@ -227,11 +228,11 @@
     margin-bottom: 6px;
   }
   .monthly-price {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--teal);
   }
-  .monthly-label { font-size: 11px; color: var(--gray); }
+  .monthly-label { font-size: 11px; color: var(--gray); margin-top: 8px; }
   .delivery-time {
     margin-top: 8px;
     font-size: 11px;
@@ -269,6 +270,100 @@
     padding: 5px;
   }
 
+  /* ─── MAINTENANCE PLANS ─── */
+  .maint-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .maint-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .maint-card-header {
+    padding: 16px 18px 12px;
+    background: var(--light-gray);
+  }
+  .maint-card-header.gold-bg { background: var(--navy); }
+  .maint-plan-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .maint-card-header.gold-bg .maint-plan-name { color: var(--white); }
+  .maint-plan-sub { font-size: 11px; color: var(--gray); }
+  .maint-card-header.gold-bg .maint-plan-sub { color: rgba(255,255,255,.5); }
+  .maint-price {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+  .maint-price-range {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .maint-price-label { font-size: 10px; color: var(--gray); margin-bottom: 4px; }
+  .maint-features {
+    padding: 14px 18px;
+    background: var(--white);
+  }
+  .maint-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    margin-bottom: 7px;
+    font-size: 11.5px;
+    color: #374151;
+  }
+  .maint-feature:last-child { margin-bottom: 0; }
+  .maint-check {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── ADD-ONS ─── */
+  .addons-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  .addons-table th {
+    background: var(--navy);
+    color: rgba(255,255,255,.8);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .addons-table th:last-child { text-align: right; }
+  .addons-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    color: #374151;
+    vertical-align: top;
+  }
+  .addons-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--teal);
+    white-space: nowrap;
+  }
+  .addons-table tr:last-child td { border-bottom: none; }
+  .addons-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* ─── SUPPORT & HOSTING ─── */
   .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -305,7 +400,7 @@
     padding: 4px 0;
     border-bottom: 1px solid var(--border);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 7px;
   }
   .info-list li:last-child { border-bottom: none; }
@@ -314,8 +409,10 @@
     color: var(--gold);
     font-size: 11px;
     flex-shrink: 0;
+    margin-top: 2px;
   }
 
+  /* ─── CTA ─── */
   .cta-section {
     background: var(--navy);
     margin: 0 -56px;
@@ -340,7 +437,14 @@
     text-align: center;
   }
   .cta-contact strong { color: rgba(255,255,255,.7); }
+  .cta-web {
+    font-size: 12px;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    text-align: center;
+  }
 
+  /* ─── FOOTER ─── */
   footer {
     padding: 20px 56px;
     display: flex;
@@ -352,6 +456,7 @@
   footer p { font-size: 11px; color: var(--gray); }
   footer strong { color: var(--navy); }
 
+  /* ─── PRINT ─── */
   @media print {
     body { background: white; }
     .page { box-shadow: none; }
@@ -360,10 +465,11 @@
 
   @media (max-width: 700px) {
     header, .body { padding-left: 24px; padding-right: 24px; }
-    .features-grid, .pricing-grid, .info-grid { grid-template-columns: 1fr; }
+    .features-grid, .pricing-grid, .maint-grid, .info-grid { grid-template-columns: 1fr; }
     .cta-section { flex-direction: column; margin: 0 -24px; padding: 30px 24px; }
     .header-title { font-size: 28px; }
     footer { padding: 16px 24px; flex-direction: column; gap: 6px; text-align: center; }
+    .addons-table { font-size: 11px; }
   }
 </style>
 </head>
@@ -375,13 +481,13 @@
     <div class="header-top">
       <span class="agency-badge">✦ Website Proposal</span>
       <div class="doc-meta">
-        <div>Prepared for: <strong>Real Estate Businesses</strong></div>
+        <div>Prepared for: <strong>Real Estate Agencies</strong></div>
       </div>
     </div>
     <div class="header-title">
-      Your Properties, <em>Online</em><br>& Selling.
+      Your Properties, <em>Listed.</em><br>Your Leads, <em>Flowing.</em>
     </div>
-    <div class="header-sub">A tailored digital presence proposal — website, SEO, WhatsApp & more</div>
+    <div class="header-sub">A tailored digital presence proposal — listings, admin panel, SEO, WhatsApp & more</div>
     <div class="gold-line"></div>
   </header>
 
@@ -392,7 +498,7 @@
       <div class="section-label">Overview</div>
       <div class="section-title">Why Your Real Estate Business Needs a Professional Website</div>
       <p class="intro-text">
-        Today, <strong>over 80% of property buyers start their search online</strong> before contacting an agent. A professional website builds instant credibility, showcases your listings beautifully, and puts your business at the top of local Google searches. We specialise in websites for real estate agents, brokers, and developers — fast, mobile-friendly, and built to convert visitors into serious inquiries. Below are three packages tailored to different growth stages. <strong>All packages include a 1-year warranty and dedicated support.</strong>
+        Today, <strong>over 80% of property buyers search online</strong> before contacting an agent. A professional website builds instant credibility, showcases your listings beautifully, and puts your agency at the top of local Google searches. We specialise in real estate websites for brokers, agencies, and builders in Bangalore — fast, mobile-friendly, and built to convert visitors into qualified inquiries. Below are three packages tailored to different growth stages. <strong>All packages include a 1-year warranty and dedicated support.</strong>
       </p>
     </div>
 
@@ -418,18 +524,18 @@
         </div>
         <div class="feature-card">
           <span class="feature-icon">🏠</span>
-          <h4>Property Listings</h4>
-          <p>Showcase residential, commercial, and rental properties with photos, prices, and details.</p>
+          <h4>Property Showcase</h4>
+          <p>Present residential, commercial, and rental listings with photos, price, and details.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon">⭐</span>
-          <h4>Client Testimonials</h4>
-          <p>Display Google reviews and success stories to build trust with new buyers and sellers.</p>
+          <span class="feature-icon">📋</span>
+          <h4>Lead Capture Forms</h4>
+          <p>Inquiry forms on every listing that send leads to your email and WhatsApp instantly.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon">🗺️</span>
           <h4>Google Maps Embed</h4>
-          <p>Interactive maps showing property locations and your office so clients find you easily.</p>
+          <p>Interactive maps showing property locations and your office address.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon">🔒</span>
@@ -441,6 +547,11 @@
           <h4>Fast Loading</h4>
           <p>Optimised images and code ensure your site loads in under 3 seconds.</p>
         </div>
+        <div class="feature-card">
+          <span class="feature-icon">⭐</span>
+          <h4>Client Testimonials</h4>
+          <p>Display Google reviews and success stories to build trust with new buyers.</p>
+        </div>
       </div>
     </div>
 
@@ -450,84 +561,182 @@
       <div class="section-title">Choose the Right Package for Your Business</div>
       <div class="pricing-grid">
 
-        <!-- Basic -->
+        <!-- STARTER -->
         <div class="pkg">
           <div class="pkg-header">
-            <div class="pkg-name">Basic</div>
-            <div class="pkg-tagline">Essential Digital Presence</div>
+            <div class="pkg-name">Starter</div>
+            <div class="pkg-tagline">Online Presence</div>
           </div>
           <div class="pkg-pricing">
             <div class="setup-label">One-time setup</div>
-            <div class="setup-price">₹12,999</div>
+            <div class="price-range">₹20,000 – ₹40,000</div>
             <div style="height:8px;"></div>
             <div class="monthly-label">Monthly maintenance</div>
-            <div class="monthly-price">₹1,999 / mo</div>
-            <div class="delivery-time">Delivery time: 3–5 days</div>
+            <div class="monthly-price">₹3,000 – ₹6,000 / mo</div>
+            <div class="delivery-time">Delivery: 7–10 working days</div>
           </div>
           <div class="pkg-features">
-            <div class="pkg-feature"><span class="check">✓</span>Professional Website (3–5 pages)</div>
-            <div class="pkg-feature"><span class="check">✓</span>Mobile Responsive Design</div>
-            <div class="pkg-feature"><span class="check">✓</span>WhatsApp Chat Button</div>
-            <div class="pkg-feature"><span class="check">✓</span>1-Year Hosting Included</div>
-            <div class="pkg-feature"><span class="check">✓</span>SSL Certificate</div>
-            <div class="pkg-feature"><span class="check">✓</span>Contact Form & Google Maps</div>
-            <div class="pkg-feature"><span class="check">✓</span>Basic On-Page SEO</div>
-            <div class="pkg-feature"><span class="check">✓</span>Monthly Content Updates</div>
+            <div class="pkg-feature"><span class="check">✓</span>5–7 page website</div>
+            <div class="pkg-feature"><span class="check">✓</span>Mobile responsive design</div>
+            <div class="pkg-feature"><span class="check">✓</span>WhatsApp integration</div>
+            <div class="pkg-feature"><span class="check">✓</span>Contact form + lead form</div>
+            <div class="pkg-feature"><span class="check">✓</span>Google Maps integration</div>
+            <div class="pkg-feature"><span class="check">✓</span>Basic SEO setup</div>
+            <div class="pkg-feature"><span class="check">✓</span>SSL + speed optimisation</div>
+            <div class="pkg-feature"><span class="check">✓</span>Domain & hosting guidance</div>
+            <div class="pkg-feature"><span class="check">✓</span>Social media links</div>
           </div>
         </div>
 
-        <!-- Standard — FEATURED -->
+        <!-- PROFESSIONAL — FEATURED -->
         <div class="pkg featured">
           <div class="popular-tag">⭐ Most Popular</div>
           <div class="pkg-header">
             <div class="pkg-badge">Recommended</div>
-            <div class="pkg-name">Standard</div>
-            <div class="pkg-tagline">Growth & Visibility</div>
+            <div class="pkg-name">Professional</div>
+            <div class="pkg-tagline">Database + Admin Panel</div>
           </div>
           <div class="pkg-pricing">
             <div class="setup-label">One-time setup</div>
-            <div class="setup-price" style="color:var(--gold);">₹19,999</div>
+            <div class="price-range" style="color:var(--gold);">₹70,000 – ₹1,20,000</div>
             <div style="height:8px;"></div>
             <div class="monthly-label">Monthly maintenance</div>
-            <div class="monthly-price">₹3,999 / mo</div>
-            <div class="delivery-time">Delivery time: 5–7 days</div>
+            <div class="monthly-price">₹7,000 – ₹12,000 / mo</div>
+            <div class="delivery-time">Delivery: 15–25 working days</div>
           </div>
           <div class="pkg-features">
-            <div class="pkg-feature"><span class="check">✓</span>Everything in Basic</div>
-            <div class="pkg-feature"><span class="check">✓</span>Google Business Profile Setup</div>
-            <div class="pkg-feature"><span class="check">✓</span>Advanced Local SEO</div>
-            <div class="pkg-feature"><span class="check">✓</span>Google Maps Ranking</div>
-            <div class="pkg-feature"><span class="check">✓</span>Monthly SEO Report</div>
-            <div class="pkg-feature"><span class="check">✓</span>Review Management</div>
-            <div class="pkg-feature"><span class="check">✓</span>2× Monthly Blog Posts</div>
-            <div class="pkg-feature"><span class="check">✓</span>Priority Support</div>
+            <div class="pkg-feature"><span class="check">✓</span>Everything in Starter</div>
+            <div class="pkg-feature"><span class="check">✓</span>Property database (dynamic listings)</div>
+            <div class="pkg-feature"><span class="check">✓</span>Admin panel — add/edit/delete listings</div>
+            <div class="pkg-feature"><span class="check">✓</span>Multiple image upload per property</div>
+            <div class="pkg-feature"><span class="check">✓</span>Filters: price, BHK, type, city</div>
+            <div class="pkg-feature"><span class="check">✓</span>Search bar</div>
+            <div class="pkg-feature"><span class="check">✓</span>SEO-friendly property URLs</div>
+            <div class="pkg-feature"><span class="check">✓</span>Featured properties section</div>
+            <div class="pkg-feature"><span class="check">✓</span>Lead notifications via email + WhatsApp</div>
           </div>
         </div>
 
-        <!-- Premium -->
+        <!-- PREMIUM -->
         <div class="pkg">
           <div class="pkg-header">
             <div class="pkg-name">Premium</div>
-            <div class="pkg-tagline">Full Premium Suite</div>
+            <div class="pkg-tagline">Full Platform + Automation</div>
           </div>
           <div class="pkg-pricing">
             <div class="setup-label">One-time setup</div>
-            <div class="setup-price">₹29,999</div>
+            <div class="price-range">₹1,50,000 – ₹3,50,000</div>
             <div style="height:8px;"></div>
             <div class="monthly-label">Monthly maintenance</div>
-            <div class="monthly-price">₹5,999 / mo</div>
-            <div class="delivery-time">Delivery time: 7–10 days</div>
+            <div class="monthly-price">₹15,000 – ₹30,000 / mo</div>
+            <div class="delivery-time">Delivery: 30–45 working days</div>
           </div>
           <div class="pkg-features">
-            <div class="pkg-feature"><span class="check">✓</span>Everything in Standard</div>
-            <div class="pkg-feature"><span class="check">✓</span>Online Inquiry & Lead Form</div>
-            <div class="pkg-feature"><span class="check">✓</span>WhatsApp Auto-Replies</div>
-            <div class="pkg-feature"><span class="check">✓</span>Social Media Integration</div>
-            <div class="pkg-feature"><span class="check">✓</span>Custom Email (you@yourdomain)</div>
+            <div class="pkg-feature"><span class="check">✓</span>Everything in Professional</div>
+            <div class="pkg-feature"><span class="check">✓</span>User login + wishlist</div>
+            <div class="pkg-feature"><span class="check">✓</span>Agent profiles + multi-agent accounts</div>
+            <div class="pkg-feature"><span class="check">✓</span>Lead management dashboard</div>
+            <div class="pkg-feature"><span class="check">✓</span>Property comparison feature</div>
+            <div class="pkg-feature"><span class="check">✓</span>Map-based property browsing</div>
+            <div class="pkg-feature"><span class="check">✓</span>CRM integration (Zoho / HubSpot)</div>
+            <div class="pkg-feature"><span class="check">✓</span>Custom landing pages for ads</div>
+            <div class="pkg-feature"><span class="check">✓</span>Advanced SEO + Google Analytics 4</div>
           </div>
         </div>
 
       </div>
+    </div>
+
+    <!-- MONTHLY MAINTENANCE -->
+    <div class="section">
+      <div class="section-label">Monthly Plans</div>
+      <div class="section-title">Keep Your Website Growing Every Month</div>
+      <div class="maint-grid">
+
+        <div class="maint-card">
+          <div class="maint-card-header">
+            <div class="maint-plan-name">Basic Maintenance</div>
+            <div class="maint-plan-sub">Hosting & uptime</div>
+          </div>
+          <div class="maint-price">
+            <div class="maint-price-label">Monthly</div>
+            <div class="maint-price-range">₹3,000 – ₹6,000</div>
+          </div>
+          <div class="maint-features">
+            <div class="maint-feature"><span class="maint-check">✓</span>Hosting monitoring</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Weekly backups</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Security updates</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Minor text/image edits (2–3/mo)</div>
+          </div>
+        </div>
+
+        <div class="maint-card">
+          <div class="maint-card-header gold-bg">
+            <div class="maint-plan-name">Growth Plan</div>
+            <div class="maint-plan-sub">Listings + SEO</div>
+          </div>
+          <div class="maint-price">
+            <div class="maint-price-label">Monthly</div>
+            <div class="maint-price-range">₹7,000 – ₹12,000</div>
+          </div>
+          <div class="maint-features">
+            <div class="maint-feature"><span class="maint-check">✓</span>Everything in Basic</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Add up to 15 listings/month</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Speed monitoring</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Monthly SEO report</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Minor feature improvements</div>
+          </div>
+        </div>
+
+        <div class="maint-card">
+          <div class="maint-card-header">
+            <div class="maint-plan-name">Premium Support</div>
+            <div class="maint-plan-sub">Unlimited + priority</div>
+          </div>
+          <div class="maint-price">
+            <div class="maint-price-label">Monthly</div>
+            <div class="maint-price-range">₹15,000 – ₹30,000</div>
+          </div>
+          <div class="maint-features">
+            <div class="maint-feature"><span class="maint-check">✓</span>Everything in Growth</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Unlimited updates</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Priority support (4–8 hr response)</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>1–2 marketing landing pages/mo</div>
+            <div class="maint-feature"><span class="maint-check">✓</span>Ads campaign support</div>
+          </div>
+        </div>
+
+      </div>
+      <p style="font-size:11.5px; color:var(--gray); margin-top:14px;">All plans require a minimum 3-month commitment. Plans can be upgraded at any time. Hosting billed separately unless bundled.</p>
+    </div>
+
+    <!-- ADD-ONS -->
+    <div class="section">
+      <div class="section-label">Optional Add-Ons</div>
+      <div class="section-title">Extend Your Website Anytime</div>
+      <table class="addons-table">
+        <thead>
+          <tr>
+            <th>Add-On</th>
+            <th style="text-align:right;">One-Time Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>WhatsApp Business API integration (auto-replies, triggers)</td><td>₹5,000 – ₹10,000</td></tr>
+          <tr><td>Blog section setup</td><td>₹5,000 – ₹8,000</td></tr>
+          <tr><td>User login / signup + wishlist system</td><td>₹15,000 – ₹25,000</td></tr>
+          <tr><td>Property comparison feature</td><td>₹8,000 – ₹12,000</td></tr>
+          <tr><td>Map-based property browsing (Google Maps pins)</td><td>₹10,000 – ₹18,000</td></tr>
+          <tr><td>Zoho CRM / HubSpot integration</td><td>₹15,000 – ₹25,000</td></tr>
+          <tr><td>Razorpay / Cashfree payment gateway (featured listings)</td><td>₹8,000 – ₹15,000</td></tr>
+          <tr><td>Agent profile pages (per agent)</td><td>₹2,000 – ₹4,000</td></tr>
+          <tr><td>Multi-agent admin accounts</td><td>₹10,000 – ₹18,000</td></tr>
+          <tr><td>Custom landing page for ad campaigns (per page)</td><td>₹5,000 – ₹10,000</td></tr>
+          <tr><td>Newsletter system setup</td><td>₹6,000 – ₹10,000</td></tr>
+          <tr><td>Advanced SEO audit + on-page optimisation</td><td>₹8,000 – ₹15,000</td></tr>
+          <tr><td>Google Analytics 4 + Search Console setup</td><td>₹3,000 – ₹5,000</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- SUPPORT & HOSTING -->
@@ -559,7 +768,7 @@
             <li>Monthly content & listing updates</li>
             <li>Bug fixes at no extra charge</li>
             <li>1-year warranty on all work done</li>
-            <li>Free minor design tweaks each month (Included in Monthly Maintenance Package)</li>
+            <li>Free minor design tweaks (Included in Monthly Plan)</li>
             <li>Annual performance review call</li>
           </ul>
         </div>
@@ -572,8 +781,8 @@
             <li>Keyword research for local property searches</li>
             <li>Google Search Console setup</li>
             <li>Sitemap & schema markup included</li>
-            <li>Google Business Profile optimisation (Standard and Premium)</li>
-            <li>Monthly ranking reports (Standard and Premium)</li>
+            <li>Google Business Profile optimisation (Professional & Premium)</li>
+            <li>Monthly ranking reports (Professional & Premium)</li>
             <li>Local citation building (Premium)</li>
           </ul>
         </div>
@@ -598,10 +807,12 @@
     <div class="section" style="border:none; padding-bottom:0;">
       <div class="cta-section">
         <div class="cta-left">
-          <h3>Ready to Get Your Business Online?</h3>
+          <h3>Ready to Get Your Listings Online?</h3>
+          <p>Let's build something your clients will remember.</p>
         </div>
         <div style="text-align:center;">
-          <div class="cta-contact">Call or WhatsApp: <strong>+91 9591020666 <br>+91 9632718157</strong></div>
+          <div class="cta-web">🌐 radhewebstudio.com</div>
+          <div class="cta-contact">Call or WhatsApp: <strong>+91 9591020666<br>+91 9632718157</strong></div>
         </div>
       </div>
     </div>
@@ -611,7 +822,8 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2026 <strong>Radhe Web Studio</strong> · All rights reserved</p>
-    <p>Prepared exclusively for <strong>Real Estate Businesses</strong></p>
+    <p>Prepared exclusively for <strong>Real Estate Agencies</strong></p>
+    <p>radhewebstudio.com</p>
   </footer>
 
 </div>

@@ -73,14 +73,17 @@
           "WhatsApp Integration",
           "Website Hosting & Maintenance"
         ],
-        "priceRange": "₹12,999 – ₹29,999",
+        "priceRange": "₹12,999 – ₹3,50,000",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Web Design Packages",
           "itemListElement": [
-            { "@type": "Offer", "name": "Starter Package", "price": "12999", "priceCurrency": "INR" },
-            { "@type": "Offer", "name": "Growth Package",  "price": "19999", "priceCurrency": "INR" },
-            { "@type": "Offer", "name": "Premium Package", "price": "29999", "priceCurrency": "INR" }
+            { "@type": "Offer", "name": "Clinic Basic",              "price": "12999",  "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Clinic Standard",           "price": "19999",  "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Clinic Premium",            "price": "29999",  "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Real Estate Starter",       "price": "20000",  "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Real Estate Professional",  "price": "70000",  "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Real Estate Premium",       "price": "150000", "priceCurrency": "INR" }
           ]
         }
       },
@@ -92,7 +95,7 @@
             "name": "How long does it take to build my website?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most websites are delivered in 3–7 working days from design approval. The Starter package takes 3–5 days, Growth takes 5–7 days, and the Premium package takes 7–10 days. We work fast without compromising quality."
+              "text": "Delivery timelines depend on the industry and package. For clinic websites: Basic takes 3–5 days, Standard takes 5–7 days, and Premium takes 7–10 days. For real estate websites: Starter takes 7–10 days, Professional takes 15–25 days, and Premium takes 30–45 days. We work fast without compromising quality."
             }
           },
           {
@@ -489,120 +492,224 @@
         <div class="section-label">Investment</div>
         <h2 class="section-title" style="color:var(--white);">Simple, <span class="italic"
             style="color:var(--gold-light);">Transparent</span> Pricing</h2>
-        <p class="section-subtitle">No hidden fees. No surprises. Just results.</p>
+        <p class="section-subtitle">Different industries, different complexity — priced accordingly. No hidden fees.</p>
       </div>
 
-      <div class="pricing-grid">
-        <!-- Starter -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <div class="pkg-name">Starter</div>
-            <div class="pkg-tagline">Essential Digital Presence</div>
+      <!-- Industry tab switcher -->
+      <div style="display:flex;gap:6px;justify-content:center;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:50px;padding:6px;width:fit-content;margin:0 auto 40px;" id="homePricingTabs">
+        <button onclick="switchHomePricing('clinic')" data-tab="clinic"
+          style="padding:10px 24px;border-radius:50px;border:none;background:var(--gold);color:var(--navy);font-size:0.88rem;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:7px;transition:all 0.25s;" id="homeTabClinic">
+          <i class="fas fa-stethoscope"></i> Clinics
+        </button>
+        <button onclick="switchHomePricing('realestate')" data-tab="realestate"
+          style="padding:10px 24px;border-radius:50px;border:none;background:transparent;color:rgba(255,255,255,0.45);font-size:0.88rem;font-weight:500;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:7px;transition:all 0.25s;" id="homeTabRE">
+          <i class="fas fa-building"></i> Real Estate
+        </button>
+      </div>
+
+      <!-- CLINIC CARDS -->
+      <div id="homePanelClinic">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pkg-name">Basic</div>
+              <div class="pkg-tagline">Essential Digital Presence</div>
+            </div>
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount">₹12,999</div>
+              <div class="price-monthly">₹1,999 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 3–5 days</div>
+            </div>
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Professional Website (3–5 pages)</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Mobile Responsive Design</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>WhatsApp Chat Button</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>1-Year Hosting Included</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>SSL Certificate</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Basic On-Page SEO</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Maps Integration</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Monthly Content Updates</div>
+            </div>
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Basic%20Clinic%20package."
+                class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
+            </div>
           </div>
-          <div class="pricing-price">
-            <div class="price-label">One-time setup</div>
-            <div class="price-amount">₹12,999</div>
-            <div class="price-monthly">₹1,999 / month</div>
-            <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 3–5 days</div>
+
+          <div class="pricing-card featured">
+            <div class="popular-ribbon">⭐ Most Popular</div>
+            <div class="pricing-header">
+              <div class="pkg-name" style="color:var(--gold-light);">Standard</div>
+              <div class="pkg-tagline">Growth & Visibility</div>
+            </div>
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount">₹19,999</div>
+              <div class="price-monthly">₹3,999 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 5–7 days</div>
+            </div>
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Basic</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Business Profile Setup</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Advanced Local SEO</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Maps Ranking</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Monthly SEO Report</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Review Management</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>2× Monthly Blog Posts</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Priority WhatsApp Support</div>
+            </div>
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Standard%20Clinic%20package."
+                class="btn btn-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
+            </div>
           </div>
-          <div class="pricing-features">
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Professional Website (3–5
-              pages)</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Mobile Responsive Design
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pkg-name">Premium</div>
+              <div class="pkg-tagline">Full Premium Suite</div>
             </div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>WhatsApp Chat Button</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>1-Year Hosting Included
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount">₹29,999</div>
+              <div class="price-monthly">₹5,999 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 7–10 days</div>
             </div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>SSL Certificate</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Basic On-Page SEO</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Maps Integration
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Standard</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Online Appointment Booking</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>WhatsApp Auto-Replies</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Social Media Integration</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Custom Business Email</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Advanced Analytics Setup</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Ad Landing Pages (2 included)</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Dedicated Account Manager</div>
             </div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Monthly Content Updates
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Premium%20Clinic%20package."
+                class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
             </div>
-          </div>
-          <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Starter%20package."
-              class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Get Started
-            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Growth — FEATURED -->
-        <div class="pricing-card featured">
-          <div class="popular-ribbon">⭐ Most Popular</div>
-          <div class="pricing-header">
-            <div class="pkg-name" style="color:var(--gold-light);">Growth</div>
-            <div class="pkg-tagline">Visibility & Lead Generation</div>
-          </div>
-          <div class="pricing-price">
-            <div class="price-label">One-time setup</div>
-            <div class="price-amount">₹19,999</div>
-            <div class="price-monthly">₹3,999 / month</div>
-            <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 5–7 days</div>
-          </div>
-          <div class="pricing-features">
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Starter</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Business Profile
-              Setup</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Advanced Local SEO</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Maps Ranking</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Monthly SEO Report</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Review Management</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>2× Monthly Blog Posts</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Priority WhatsApp Support
+      <!-- REAL ESTATE CARDS -->
+      <div id="homePanelRE" style="display:none;">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pkg-name">Starter</div>
+              <div class="pkg-tagline">Online Presence</div>
+            </div>
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount" style="font-size:1.4rem;">₹20,000 – ₹40,000</div>
+              <div class="price-monthly">₹3,000 – ₹6,000 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 7–10 days</div>
+            </div>
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>5–7 page website</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Mobile responsive design</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>WhatsApp integration</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Contact & lead forms</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Google Maps integration</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Basic SEO + SSL</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Social media links</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>1-Year Bug-Fix Warranty</div>
+            </div>
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Starter%20Real%20Estate%20package."
+                class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
             </div>
           </div>
-          <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Growth%20package."
-              class="btn btn-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Get Started
-            </a>
-          </div>
-        </div>
 
-        <!-- Premium -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <div class="pkg-name">Premium</div>
-            <div class="pkg-tagline">Full Premium Suite</div>
-          </div>
-          <div class="pricing-price">
-            <div class="price-label">One-time setup</div>
-            <div class="price-amount">₹29,999</div>
-            <div class="price-monthly">₹5,999 / month</div>
-            <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 7–10 days</div>
-          </div>
-          <div class="pricing-features">
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Growth</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Online Appointment / Inquiry
-              Booking</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>WhatsApp Auto-Replies</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Social Media Integration
+          <div class="pricing-card featured">
+            <div class="popular-ribbon">⭐ Most Popular</div>
+            <div class="pricing-header">
+              <div class="pkg-name" style="color:var(--gold-light);">Professional</div>
+              <div class="pkg-tagline">Database + Admin Panel</div>
             </div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Custom Business Email</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Advanced Analytics Setup
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount" style="font-size:1.4rem;">₹70,000 – ₹1,20,000</div>
+              <div class="price-monthly">₹7,000 – ₹12,000 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 15–25 days</div>
             </div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Ad Landing Pages (2
-              included)</div>
-            <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Dedicated Account Manager
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Starter</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Property database (dynamic listings)</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Admin panel — add/edit/delete</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Filters: price, BHK, type, city</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Property search bar</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>SEO-friendly property URLs</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Lead notifications: email + WhatsApp</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Featured properties section</div>
+            </div>
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Professional%20Real%20Estate%20package."
+                class="btn btn-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
             </div>
           </div>
-          <div class="pricing-cta">
-            <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Premium%20package."
-              class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Get Started
-            </a>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pkg-name">Premium</div>
+              <div class="pkg-tagline">Full Platform + Automation</div>
+            </div>
+            <div class="pricing-price">
+              <div class="price-label">One-time setup</div>
+              <div class="price-amount" style="font-size:1.4rem;">₹1,50,000 – ₹3,50,000</div>
+              <div class="price-monthly">₹15,000 – ₹30,000 / month</div>
+              <div class="price-delivery"><i class="fas fa-clock"></i> Delivery: 30–45 days</div>
+            </div>
+            <div class="pricing-features">
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Everything in Professional</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>User login + wishlist</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Agent profiles + multi-agent</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Lead management dashboard</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Property comparison feature</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Map-based property browsing</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>CRM integration (Zoho/HubSpot)</div>
+              <div class="pkg-feature"><span class="check"><i class="fas fa-check"></i></span>Advanced SEO + Google Analytics 4</div>
+            </div>
+            <div class="pricing-cta">
+              <a href="https://wa.me/919632718157?text=Hi%20Radhe%20Web%20Studio%2C%20I%20am%20interested%20in%20the%20Premium%20Real%20Estate%20package."
+                class="btn btn-outline-gold w-full" style="justify-content:center;" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Get Started
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="text-center" style="margin-top: 48px;">
-        <a href="pricing.html" class="btn btn-outline-gold btn-lg">Compare All Features <i
+        <a href="pricing.html" class="btn btn-outline-gold btn-lg">See All Packages & Compare <i
             class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
+  <script>
+    function switchHomePricing(tab) {
+      var isClinic = tab === 'clinic';
+      document.getElementById('homePanelClinic').style.display = isClinic ? '' : 'none';
+      document.getElementById('homePanelRE').style.display = isClinic ? 'none' : '';
+      var activeStyle = 'background:var(--gold);color:var(--navy);font-weight:700;';
+      var inactiveStyle = 'background:transparent;color:rgba(255,255,255,0.45);font-weight:500;';
+      document.getElementById('homeTabClinic').style.cssText += isClinic ? activeStyle : inactiveStyle;
+      document.getElementById('homeTabRE').style.cssText += isClinic ? inactiveStyle : activeStyle;
+    }
+  </script>
 
   <!-- ══════════════════════════════════════
      WHY CHOOSE US
@@ -820,9 +927,7 @@
             <span class="faq-icon"><i class="fas fa-plus"></i></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Most websites are delivered in 3–7 working days from design approval. The
-              Starter package takes 3–5 days, Growth takes 5–7 days, and the Premium package takes 7–10 days. We work
-              fast without compromising quality.</div>
+            <div class="faq-answer-inner">Delivery depends on the industry and package. For clinic websites: Basic takes 3–5 days, Standard takes 5–7 days, and Premium takes 7–10 days. For real estate websites: Starter takes 7–10 days, Professional takes 15–25 days, and Premium takes 30–45 days. We work fast without compromising quality.</div>
           </div>
         </div>
 
