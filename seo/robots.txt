@@ -17,4 +17,4 @@ Allow: /about.html
 Allow: /contact.html
 
 # Sitemap location
-Sitemap: https://radhewebstudios.com/seo/sitemap.xml
+Sitemap: https://radhewebstudios.com/sitemap.xml
