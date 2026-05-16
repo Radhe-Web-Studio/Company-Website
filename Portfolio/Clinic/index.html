@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileCare Dental Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+        <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Your Smile<br /><span class="blue">Our Priority</span></h1>
+        <p>We provide personalized dental care with advanced technology for a healthy and beautiful smile.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-dark">Book Appointment</a>
+          <a href="services.html" class="btn btn-outline">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <div class="hero-img-placeholder">
+          <img src="hero-patient.png" alt="Patient receiving dental care at SmileCare" />
+          <div class="dentist-card">
+            <i class="fa-solid fa-circle-check" style="color:#22c55e"></i>
+            <span>5,000+ Happy Patients</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue-icon"><i class="fa-solid fa-microscope"></i></div>
+        <h3>Advanced Technology</h3>
+        <p>State-of-the-art equipment for precise, comfortable dental treatments.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <h3>Pain-Free Treatment</h3>
+        <p>Modern techniques and sedation options ensure a pain-free experience.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <h3>Experienced Dentists</h3>
+        <p>Our team of specialists brings decades of combined clinical experience.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue-icon"><i class="fa-solid fa-tag"></i></div>
+        <h3>Affordable Pricing</h3>
+        <p>Transparent, competitive pricing with flexible payment plans available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <div class="container why-inner">
+      <div class="why-img-wrap">
+        <div class="why-img-placeholder">
+          <img src="clinic-interior.png" alt="Modern dental clinic interior" />
+        </div>
+      </div>
+      <div class="why-text">
+        <p class="section-label">WHY CHOOSE US</p>
+        <h2>Committed to Your <span class="blue">Dental Health</span></h2>
+        <p class="why-desc">At SmileCare, we combine compassionate care with cutting-edge technology to deliver results you can smile about. From routine check-ups to full smile makeovers, we've got you covered.</p>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-circle-check"></i> 15+ years of dental excellence</li>
+          <li><i class="fa-solid fa-circle-check"></i> Digital X-rays & 3D imaging</li>
+          <li><i class="fa-solid fa-circle-check"></i> Emergency dental care available</li>
+          <li><i class="fa-solid fa-circle-check"></i> Accepts all major insurance plans</li>
+        </ul>
+        <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat">
+        <h2>5K+</h2>
+        <p>Happy Patients</p>
+      </div>
+      <div class="stat">
+        <h2>15+</h2>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <h2>20+</h2>
+        <p>Expert Dentists</p>
+      </div>
+      <div class="stat">
+        <h2>98%</h2>
+        <p>Satisfaction Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label center">TESTIMONIALS</p>
+      <h2 class="center">What Our <span class="blue">Patients Say</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The team at SmileCare made me feel completely at ease. My teeth whitening results are amazing!"</p>
+          <div class="testimonial-author">
+            <div class="avatar">S</div>
+            <div><strong>Sarah M.</strong><br /><small>Teeth Whitening Patient</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Professional, friendly, and pain-free. Best dental experience I've ever had. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="avatar">J</div>
+            <div><strong>James R.</strong><br /><small>Implant Patient</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"My kids love coming here! The staff is so gentle and the results speak for themselves."</p>
+          <div class="testimonial-author">
+            <div class="avatar">A</div>
+            <div><strong>Amanda K.</strong><br /><small>Family Dentistry Patient</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to Transform Your Smile?</h2>
+        <p>Book your free consultation today and take the first step toward a healthier smile.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+          <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+        </a>
+        <p>Providing personalized dental care with advanced technology for a healthy, beautiful smile.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Smile Street, New York, NY</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@smilecare.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SmileCare Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

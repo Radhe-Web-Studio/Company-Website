@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — BuildRight Constructions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 72px 0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .service-detail:last-child { border-bottom: none; }
+    .service-detail.reverse { direction: rtl; }
+    .service-detail.reverse > * { direction: ltr; }
+    .service-detail img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+    .service-detail-content h2 { margin-bottom: 14px; }
+    .service-detail-content p { margin-bottom: 20px; }
+    .service-features { display: flex; flex-direction: column; gap: 10px; margin: 20px 0 28px; }
+    .service-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--gray);
+    }
+    .service-feature svg { width: 18px; height: 18px; stroke: var(--primary); flex-shrink: 0; }
+    .price-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249,115,22,0.08);
+      border: 1px solid rgba(249,115,22,0.2);
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 860px) {
+      .service-detail { grid-template-columns: 1fr; gap: 32px; }
+      .service-detail.reverse { direction: ltr; }
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .why-card {
+      padding: 32px 28px;
+      background: white;
+      border-radius: 16px;
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow);
+    }
+    .why-card h3 { margin-bottom: 10px; color: var(--dark); }
+    .why-card p { font-size: 0.9rem; }
+    @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar dark-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" fill="white"/><path d="M9 21V12h6v9" fill="rgba(255,255,255,0.4)"/></svg></div>
+          <div class="logo-text"><strong>BuildRight</strong><span>Constructions</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">What We Offer</span>
+      <h1>Our <span class="orange">Services</span></h1>
+      <p>Comprehensive construction solutions from foundation to finishing.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        Services
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section class="section-pad">
+    <div class="container">
+
+      <div class="service-detail">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80" alt="Residential Construction" />
+        <div class="service-detail-content">
+          <span class="section-label">01</span>
+          <h2>Residential <span class="orange">Construction</span></h2>
+          <div class="price-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Starting ₹45 Lakh onwards
+          </div>
+          <p>We specialise in building custom homes that reflect your personality and lifestyle. From compact family residences to sprawling luxury bungalows, every home is crafted with care, quality materials, and attention to detail.</p>
+          <div class="service-features">
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Custom floor plan design & 3D walkthrough</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Premium material procurement at best rates</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Vastu/feng shui compliant layouts available</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 5-year structural warranty on all homes</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&auto=format&fit=crop&q=80" alt="Commercial Buildings" />
+        <div class="service-detail-content">
+          <span class="section-label">02</span>
+          <h2>Commercial <span class="orange">Buildings</span></h2>
+          <div class="price-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            Custom pricing based on scope
+          </div>
+          <p>From office towers to shopping malls and hospitality properties, our commercial construction team delivers large-scale projects with precision project management, safety compliance, and timely delivery.</p>
+          <div class="service-features">
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Turnkey solutions — design to handover</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> BIM (Building Information Modelling) driven</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Green building & LEED certification support</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dedicated project manager assigned</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=80" alt="Interior & Renovation" />
+        <div class="service-detail-content">
+          <span class="section-label">03</span>
+          <h2>Interior & <span class="orange">Renovation</span></h2>
+          <div class="price-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+            Starting ₹8 Lakh onwards
+          </div>
+          <p>Breathe new life into your existing spaces. Our renovation specialists transform outdated properties into modern, functional, and beautiful environments — with minimal disruption and maximum impact.</p>
+          <div class="service-features">
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full interior design consultation included</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Modular kitchen & wardrobe solutions</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> False ceilings, flooring & lighting design</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Completed in 45–90 days guaranteed</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80" alt="Infrastructure" />
+        <div class="service-detail-content">
+          <span class="section-label">04</span>
+          <h2>Infrastructure <span class="orange">Works</span></h2>
+          <div class="price-tag">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg>
+            Government & private contracts
+          </div>
+          <p>Our infrastructure division handles large-scale civil engineering works including roads, bridges, drainage systems, water treatment plants, and public utility structures under strict safety and quality protocols.</p>
+          <div class="service-features">
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Roads, flyovers & bridge construction</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Water & sewage treatment facilities</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Government tender experience (12+ years)</div>
+            <div class="service-feature"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full environmental compliance management</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section-pad" style="background:var(--light-gray)">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why BuildRight</span>
+        <h2 class="section-title">The <span class="orange">BuildRight</span> Advantage</h2>
+        <p class="section-subtitle">What sets us apart from every other construction firm in the industry.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <h3>Transparent Costing</h3>
+          <p>Detailed cost breakdowns with zero hidden charges. You know exactly where every rupee goes, from day one to handover.</p>
+        </div>
+        <div class="why-card fade-up">
+          <h3>On-Time Guarantee</h3>
+          <p>We've delivered 95% of projects on or before deadline. Milestone-based tracking keeps everyone accountable.</p>
+        </div>
+        <div class="why-card fade-up">
+          <h3>Premium Materials</h3>
+          <p>We source only from approved, certified suppliers. No substitutions without your written approval, ever.</p>
+        </div>
+        <div class="why-card fade-up">
+          <h3>Dedicated PM</h3>
+          <p>Every project gets a dedicated Project Manager as your single point of contact — available 6 days a week.</p>
+        </div>
+        <div class="why-card fade-up">
+          <h3>Safety First</h3>
+          <p>Zero major incidents in 10+ years. Rigorous on-site safety protocols, PPE compliance and monthly audits.</p>
+        </div>
+        <div class="why-card fade-up">
+          <h3>Post-Handover Support</h3>
+          <p>Our relationship doesn't end at handover. 5-year structural warranty and dedicated after-sales support team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section-pad">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Our Simple <span class="orange">4-Step Process</span></h2>
+      </div>
+      <div class="process-steps" style="margin-top:56px">
+        <div class="process-step fade-up"><div class="process-num">01</div><h3>Consultation</h3><p>Free site visit and needs assessment with our senior engineer.</p></div>
+        <div class="process-step fade-up"><div class="process-num">02</div><h3>Design & Quote</h3><p>Detailed designs, 3D models, and transparent cost estimate.</p></div>
+        <div class="process-step fade-up"><div class="process-num">03</div><h3>Build</h3><p>Construction with milestone updates and real-time site access.</p></div>
+        <div class="process-step fade-up"><div class="process-num">04</div><h3>Handover</h3><p>Final walkthrough, snagging, and full documentation package.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Get a free consultation and detailed quote within 48 hours.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-dark">Request a Free Quote</a>
+        <a href="projects.html" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="nav-logo" style="display:inline-flex">
+            <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" fill="white"/><path d="M9 21V12h6v9" fill="rgba(255,255,255,0.4)"/></svg></div>
+            <div class="logo-text"><strong>BuildRight</strong><span>Constructions</span></div>
+          </a>
+          <p>Building exceptional structures across India since 2001.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Residential</a></li><li><a href="services.html">Commercial</a></li><li><a href="services.html">Renovation</a></li><li><a href="services.html">Architecture</a></li><li><a href="services.html">Infrastructure</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>123 Construction Lane, Mumbai</span></div>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 13.6 19.79 19.79 0 01.44 4.98 2 2 0 012.42 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006.04 6.04l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>+1 (800) 555-BUILD</span></div>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@buildright.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BuildRight Constructions. All rights reserved.</p>
+        <p>Website by <a href="#">Radhe Web Studios</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

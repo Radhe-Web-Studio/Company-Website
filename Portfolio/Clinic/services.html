@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — SmileCare Dental Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+        <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="padding:0;background:linear-gradient(135deg,#f0f7ff,#fff);">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-top:70px;padding-bottom:70px;">
+      <div style="text-align:left;">
+        <p class="section-label">WHAT WE OFFER</p>
+        <h1 style="text-align:left;">Our Dental <span class="blue">Services</span></h1>
+        <p class="sub" style="margin:0;text-align:left;">From routine cleanings to full smile makeovers, we provide comprehensive dental care for the whole family.</p>
+      </div>
+      <div style="border-radius:20px;overflow:hidden;height:320px;">
+        <img src="dental-tools.png" alt="Dental instruments" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+          <h3>General Dentistry</h3>
+          <p>Comprehensive oral exams, professional cleanings, fillings, and preventive care to keep your teeth healthy year-round.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-star"></i></div>
+          <h3>Teeth Whitening</h3>
+          <p>Professional-grade whitening treatments that brighten your smile by up to 8 shades in a single visit.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that restore full function and confidence to your smile.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Cosmetic Dentistry</h3>
+          <p>Veneers, bonding, and smile design services crafted to give you the picture-perfect smile you've always wanted.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
+          <h3>Orthodontics</h3>
+          <p>Traditional braces and clear aligner therapy to straighten your teeth comfortably and discreetly.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-child-reaching"></i></div>
+          <h3>Pediatric Dentistry</h3>
+          <p>Gentle, fun dental care designed specifically for children, building healthy habits from an early age.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h3>Root Canal Therapy</h3>
+          <p>Modern, virtually painless root canal treatment that saves infected teeth and relieves discomfort quickly.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Gum Disease Treatment</h3>
+          <p>Deep cleaning, scaling, and periodontal therapy to treat and prevent gum disease at every stage.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Emergency Dentistry</h3>
+          <p>Same-day emergency appointments for toothaches, broken teeth, and other urgent dental situations.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="why" style="background:#f8fafc; padding: 80px 0;">
+    <div class="container">
+      <p class="section-label center">HOW IT WORKS</p>
+      <h2 class="center" style="font-size:36px;font-weight:800;color:#0f172a;text-align:center;margin-bottom:48px;">Your Journey to a <span class="blue">Perfect Smile</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:#2563EB;border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">1</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#0f172a;">Book Appointment</h3>
+          <p style="font-size:14px;color:#64748b;line-height:1.6;">Schedule online or call us to find a convenient time.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:#2563EB;border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">2</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#0f172a;">Consultation</h3>
+          <p style="font-size:14px;color:#64748b;line-height:1.6;">Meet your dentist and discuss your dental goals and history.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:#2563EB;border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">3</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#0f172a;">Treatment Plan</h3>
+          <p style="font-size:14px;color:#64748b;line-height:1.6;">Receive a personalized treatment plan with clear pricing.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:#2563EB;border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">4</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#0f172a;">Smile!</h3>
+          <p style="font-size:14px;color:#64748b;line-height:1.6;">Enjoy your results and maintain with regular check-ups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not Sure Which Service You Need?</h2>
+        <p>Book a free consultation and our team will guide you to the right treatment.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+          <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+        </a>
+        <p>Providing personalized dental care with advanced technology for a healthy, beautiful smile.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Smile Street, New York, NY</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@smilecare.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SmileCare Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

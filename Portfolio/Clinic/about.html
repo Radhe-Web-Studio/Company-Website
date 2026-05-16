@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — SmileCare Dental Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+        <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">WHO WE ARE</p>
+      <h1>About <span class="blue">SmileCare</span></h1>
+      <p class="sub">A passionate team of dental professionals dedicated to giving every patient a healthy, confident smile.</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="why" style="padding: 80px 0;">
+    <div class="container why-inner">
+      <div class="why-img-wrap">
+        <div class="why-img-placeholder" style="height:420px;">
+          <img src="clinic-interior.png" alt="SmileCare dental clinic" />
+          <div style="position:absolute;bottom:20px;left:20px;background:#fff;border-radius:12px;padding:14px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.12);text-align:center;">
+            <p style="font-size:28px;font-weight:800;color:#2563EB;margin:0;">Est. 2009</p>
+            <p style="font-size:13px;color:#64748b;margin:0;">Serving smiles for 15+ years</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-text">
+        <p class="section-label">OUR STORY</p>
+        <h2>Built on a Passion for <span class="blue">Better Smiles</span></h2>
+        <p class="why-desc">SmileCare was founded in 2009 by Dr. Priya Sharma with a single mission: to make high-quality dental care accessible, comfortable, and affordable for everyone. What started as a small two-chair practice has grown into a full-service clinic with a team of 20+ specialists.</p>
+        <p class="why-desc">Today, we combine the warmth of a family practice with the capabilities of a modern dental centre — serving over 5,000 patients across all age groups.</p>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-circle-check"></i> Founded by board-certified specialists</li>
+          <li><i class="fa-solid fa-circle-check"></i> State-of-the-art facility, renovated in 2023</li>
+          <li><i class="fa-solid fa-circle-check"></i> Patient-first approach in everything we do</li>
+          <li><i class="fa-solid fa-circle-check"></i> Committed to ongoing education & training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><h2>5K+</h2><p>Happy Patients</p></div>
+      <div class="stat"><h2>15+</h2><p>Years Experience</p></div>
+      <div class="stat"><h2>20+</h2><p>Expert Dentists</p></div>
+      <div class="stat"><h2>98%</h2><p>Satisfaction Rate</p></div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section style="padding: 80px 0; background:#f8fafc;">
+    <div class="container">
+      <p class="section-label center">WHAT DRIVES US</p>
+      <h2 style="font-size:36px;font-weight:800;color:#0f172a;text-align:center;margin-bottom:48px;">Our Mission & <span class="blue">Core Values</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+        <div class="feature-card">
+          <div class="blue-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Compassionate Care</h3>
+          <p>We treat every patient like family, listening first and always putting your comfort and wellbeing above all else.</p>
+        </div>
+        <div class="feature-card">
+          <div class="blue-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Clinical Excellence</h3>
+          <p>Our team pursues the highest clinical standards, staying current with the latest techniques and research in dentistry.</p>
+        </div>
+        <div class="feature-card">
+          <div class="blue-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Honest Transparency</h3>
+          <p>Clear explanations, upfront pricing, and no surprises — we believe trust is the foundation of great dental care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="padding: 80px 0; background:#fff;">
+    <div class="container">
+      <p class="section-label center">MEET THE TEAM</p>
+      <h2 style="font-size:36px;font-weight:800;color:#0f172a;text-align:center;margin-bottom:48px;">The Faces Behind <span class="blue">Your Smile</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Priya Sharma" /></div>
+          <h4>Dr. Priya Sharma</h4>
+          <p>Founder & Lead Dentist</p>
+          <span>General & Cosmetic Dentistry</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Raj Kumar" /></div>
+          <h4>Dr. Raj Kumar</h4>
+          <p>Orthodontist</p>
+          <span>Braces & Aligners</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Aisha Mehta" /></div>
+          <h4>Dr. Aisha Mehta</h4>
+          <p>Periodontist</p>
+          <span>Gum Health Specialist</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Dr. Tom Chen" /></div>
+          <h4>Dr. Tom Chen</h4>
+          <p>Oral Surgeon</p>
+          <span>Implants & Extractions</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Come Visit Us Today</h2>
+        <p>Book a consultation and experience the SmileCare difference for yourself.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+          <span class="logo-text">SmileCare <small>DENTAL CLINIC</small></span>
+        </a>
+        <p>Providing personalized dental care with advanced technology for a healthy, beautiful smile.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Smile Street, New York, NY</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@smilecare.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SmileCare Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    .team-card {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .team-card:hover {
+      box-shadow: 0 8px 30px rgba(37,99,235,0.1);
+      transform: translateY(-4px);
+    }
+    .team-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 16px;
+      border: 3px solid #dbeafe;
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .team-card h4 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+    .team-card p { font-size: 13px; color: #2563EB; font-weight: 600; margin-bottom: 6px; }
+    .team-card span { font-size: 12px; color: #94a3b8; }
+
+    @media (max-width: 900px) {
+      .team-card { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      div[style*="grid-template-columns:repeat(4"] { grid-template-columns: 1fr 1fr !important; }
+      div[style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

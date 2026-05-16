@@ -5,7 +5,8 @@
       "Bash(Select-Object FullName)",
       "Bash(Sort-Object FullName)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\sajja\\\\OneDrive\\\\Desktop\\\\Radhe Web Studio\\\\Company Website\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName | Sort-Object FullName)",
-      "Bash(Get-Content \"C:\\\\Users\\\\sajja\\\\OneDrive\\\\Desktop\\\\Radhe Web Studio\\\\Company Website\\\\assets\\\\Legal\\\\Privacy Policies.txt\" -Raw)"
+      "Bash(Get-Content \"C:\\\\Users\\\\sajja\\\\OneDrive\\\\Desktop\\\\Radhe Web Studio\\\\Company Website\\\\assets\\\\Legal\\\\Privacy Policies.txt\" -Raw)",
+      "Bash(find \"/mnt/c/Users/sajja/OneDrive/Desktop/Radhe Web Studio/Company Website\" -type d | head -30)"
     ]
   }
 }

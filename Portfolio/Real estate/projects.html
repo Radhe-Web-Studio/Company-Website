@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — BuildRight Constructions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      padding: 9px 22px;
+      border-radius: 100px;
+      border: 1.5px solid #E2E8F0;
+      background: white;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--gray);
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+    .projects-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 900px) { .projects-full-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px) { .projects-full-grid { grid-template-columns: 1fr; } }
+
+    .featured-project {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 56px;
+      align-items: center;
+      background: var(--light-gray);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+    .featured-project img { width: 100%; height: 420px; object-fit: cover; }
+    .featured-info { padding: 40px 40px 40px 0; }
+    .featured-info h3 { font-size: 1.6rem; color: var(--dark); margin-bottom: 12px; }
+    .featured-info p { margin-bottom: 20px; }
+    .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .project-tags span {
+      background: rgba(249,115,22,0.1);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    .project-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .project-detail-item { }
+    .project-detail-item label { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 3px; }
+    .project-detail-item strong { font-size: 0.92rem; color: var(--dark); }
+    @media (max-width: 860px) {
+      .featured-project { grid-template-columns: 1fr; }
+      .featured-info { padding: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar dark-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" fill="white"/><path d="M9 21V12h6v9" fill="rgba(255,255,255,0.4)"/></svg></div>
+          <div class="logo-text"><strong>BuildRight</strong><span>Constructions</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Portfolio</span>
+      <h1>Our <span class="orange">Projects</span></h1>
+      <p>500+ completed projects — each one a landmark in its own right.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        Projects
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section-pad">
+    <div class="container">
+
+      <!-- Featured -->
+      <div class="text-center" style="margin-bottom:48px">
+        <span class="section-label">Spotlight</span>
+        <h2 class="section-title">Featured <span class="orange">Project</span></h2>
+      </div>
+
+      <div class="featured-project fade-up">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&auto=format&fit=crop&q=80" alt="Nexus Business Tower" />
+        <div class="featured-info">
+          <div class="project-tags">
+            <span>Commercial</span>
+            <span>2024</span>
+            <span>Award Winning</span>
+          </div>
+          <h3>Nexus Business Tower</h3>
+          <p>An iconic 18-storey commercial tower in the heart of Pune's financial district. Features Grade-A office spaces, a sky-lounge on the 17th floor, retail promenade, and a rooftop garden. Completed 3 weeks ahead of schedule.</p>
+          <div class="project-details">
+            <div class="project-detail-item"><label>Location</label><strong>Pune, Maharashtra</strong></div>
+            <div class="project-detail-item"><label>Year</label><strong>2024</strong></div>
+            <div class="project-detail-item"><label>Area</label><strong>2,80,000 sq ft</strong></div>
+            <div class="project-detail-item"><label>Client</label><strong>Nexus Realty Pvt Ltd</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('residential', this)">Residential</button>
+        <button class="filter-btn" onclick="filterProjects('commercial', this)">Commercial</button>
+        <button class="filter-btn" onclick="filterProjects('villa', this)">Villa</button>
+        <button class="filter-btn" onclick="filterProjects('infrastructure', this)">Infrastructure</button>
+      </div>
+
+      <div class="projects-full-grid" id="projectsGrid">
+
+        <div class="project-card fade-up" data-cat="residential">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&auto=format&fit=crop&q=80" alt="Greenview Residences" />
+            <span class="project-category">Residential</span>
+          </div>
+          <div class="project-info">
+            <h3>Greenview Residences</h3>
+            <p>24-unit luxury complex with eco-friendly design and smart home integration.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Mumbai</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="villa">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=80" alt="Skyline Villa" />
+            <span class="project-category">Villa</span>
+          </div>
+          <div class="project-info">
+            <h3>Skyline Villa Estate</h3>
+            <p>6 bespoke villas with panoramic valley views and private pools.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Lonavala</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="commercial">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&auto=format&fit=crop&q=80" alt="Metro Mall" />
+            <span class="project-category">Commercial</span>
+          </div>
+          <div class="project-info">
+            <h3>Metro Central Mall</h3>
+            <p>4-level retail & entertainment complex with 180 stores and food court.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Nashik</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="residential">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=700&auto=format&fit=crop&q=80" alt="Sunrise Apartments" />
+            <span class="project-category">Residential</span>
+          </div>
+          <div class="project-info">
+            <h3>Sunrise Apartments</h3>
+            <p>120-unit affordable housing complex with community spaces and green zones.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Thane</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="infrastructure">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80" alt="Highway Bridge" />
+            <span class="project-category">Infrastructure</span>
+          </div>
+          <div class="project-info">
+            <h3>NH-48 Overpass Bridge</h3>
+            <p>360-metre overpass bridge built to ease traffic on National Highway 48.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Pune–Mumbai</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="villa">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=700&auto=format&fit=crop&q=80" alt="Coastal Haven" />
+            <span class="project-category">Villa</span>
+          </div>
+          <div class="project-info">
+            <h3>Coastal Haven Villas</h3>
+            <p>Oceanfront luxury villas with infinity pools and private beach access.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Alibaug</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="commercial">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&auto=format&fit=crop&q=80" alt="Tech Park" />
+            <span class="project-category">Commercial</span>
+          </div>
+          <div class="project-info">
+            <h3>Innovate Tech Park</h3>
+            <p>Campus-style IT park with 6 buildings, auditorium and recreational zones.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Hinjewadi, Pune</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="residential">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&auto=format&fit=crop&q=80" alt="Heritage Homes" />
+            <span class="project-category">Residential</span>
+          </div>
+          <div class="project-info">
+            <h3>Heritage Homes</h3>
+            <p>Boutique row-house community blending traditional aesthetics with modern comfort.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Kolhapur</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-up" data-cat="infrastructure">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&auto=format&fit=crop&q=80" alt="Water Treatment" />
+            <span class="project-category">Infrastructure</span>
+          </div>
+          <div class="project-info">
+            <h3>Municipal Water Plant</h3>
+            <p>50 MLD water treatment facility serving 3 lakh residents daily.</p>
+            <div class="project-meta">
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Aurangabad</span>
+              <span><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2022</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Have a Project in Mind?</h2>
+      <p>Let's discuss your vision and create something remarkable together.</p>
+      <a href="contact.html" class="btn btn-dark">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="nav-logo" style="display:inline-flex">
+            <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" fill="white"/><path d="M9 21V12h6v9" fill="rgba(255,255,255,0.4)"/></svg></div>
+            <div class="logo-text"><strong>BuildRight</strong><span>Constructions</span></div>
+          </a>
+          <p>Building exceptional structures across India since 2001.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-btn"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Residential</a></li><li><a href="services.html">Commercial</a></li><li><a href="services.html">Renovation</a></li><li><a href="services.html">Architecture</a></li><li><a href="services.html">Infrastructure</a></li></ul></div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>123 Construction Lane, Mumbai</span></div>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 13.6 19.79 19.79 0 01.44 4.98 2 2 0 012.42 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006.04 6.04l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>+1 (800) 555-BUILD</span></div>
+          <div class="footer-contact-item"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@buildright.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BuildRight Constructions. All rights reserved.</p>
+        <p>Website by <a href="#">Radhe Web Studios</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#projectsGrid .project-card').forEach(card => {
+        const show = cat === 'all' || card.dataset.cat === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
