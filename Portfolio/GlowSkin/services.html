@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — GlowSkin Skin Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+        <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="padding:0; background:linear-gradient(135deg,#fff5f8,#fff);">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-top:70px;padding-bottom:70px;">
+      <div style="text-align:left;">
+        <p class="section-label">WHAT WE OFFER</p>
+        <h1 style="text-align:left;">Our Skin <span class="pink">Treatments</span></h1>
+        <p class="sub" style="margin:0;text-align:left;">From everyday skin concerns to advanced cosmetic treatments — we have a solution crafted just for your skin.</p>
+      </div>
+      <div style="border-radius:20px;overflow:hidden;height:300px;">
+        <img src="services-banner.png" alt="Skin treatment tools" style="width:100%;height:100%;object-fit:cover;display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="services-section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Skin Rejuvenation</h3>
+          <p>Restore youthful radiance with medical-grade peels, microdermabrasion, and advanced hydration therapies.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-face-smile"></i></div>
+          <h3>Acne Treatment</h3>
+          <p>Clinically proven acne management combining topical therapies, light-based treatments, and dietary guidance.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Laser Therapy</h3>
+          <p>Precision laser treatments for pigmentation correction, skin resurfacing, and permanent hair reduction.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Anti-Aging</h3>
+          <p>Botox, dermal fillers, and collagen induction therapy to smooth fine lines and restore volume naturally.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+          <h3>Hydra Facial</h3>
+          <p>A multi-step facial that deeply cleanses, exfoliates, extracts, and hydrates for instant glowing skin.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-sun"></i></div>
+          <h3>Pigmentation Control</h3>
+          <p>Targeted treatments for dark spots, melasma, and uneven skin tone using depigmentation serums and lasers.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h3>PRP Therapy</h3>
+          <p>Platelet-Rich Plasma therapy to stimulate collagen production for hair regrowth and skin regeneration.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+          <h3>Body Treatments</h3>
+          <p>Full-body skin care including stretch mark reduction, body polishing, and cellulite treatments.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Sensitive Skin Care</h3>
+          <p>Gentle, dermatologist-designed protocols for rosacea, eczema, and reactive skin conditions.</p>
+          <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background:#fff9fb;padding:80px 0;">
+    <div class="container">
+      <p class="section-label center">HOW IT WORKS</p>
+      <h2 style="font-size:36px;font-weight:800;color:#1e1a2e;text-align:center;margin-bottom:48px;">Your Journey to <span class="pink">Glowing Skin</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8467c,#f472b6);border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">1</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#1e1a2e;">Book Consultation</h3>
+          <p style="font-size:14px;color:#7a6b7e;line-height:1.6;">Schedule a free skin analysis session with our dermatologist.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8467c,#f472b6);border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">2</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#1e1a2e;">Skin Analysis</h3>
+          <p style="font-size:14px;color:#7a6b7e;line-height:1.6;">We assess your skin type, concerns, and goals in detail.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8467c,#f472b6);border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">3</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#1e1a2e;">Custom Plan</h3>
+          <p style="font-size:14px;color:#7a6b7e;line-height:1.6;">Receive a personalized treatment plan with clear pricing.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8467c,#f472b6);border-radius:50%;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">4</div>
+          <h3 style="font-size:16px;margin-bottom:8px;color:#1e1a2e;">Glow Up!</h3>
+          <p style="font-size:14px;color:#7a6b7e;line-height:1.6;">Begin your treatment and enjoy visible results within weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not Sure Which Treatment Is Right for You?</h2>
+        <p>Book a free consultation and our dermatologists will guide you to the best solution.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+          <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+        </a>
+        <p>Advanced skin treatments and personalized care for healthy, glowing skin.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 45 Glow Avenue, Mumbai, MH</p>
+        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@glowskin.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GlowSkin Skin Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

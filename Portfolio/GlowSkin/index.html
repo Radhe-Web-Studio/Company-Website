@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowSkin Skin Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+        <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Reveal Your<br />Natural <span class="pink">Glow</span></h1>
+        <p>Advanced skin treatments and personalized care for healthy, glowing skin. Trusted by thousands of happy clients.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+          <a href="services.html" class="btn btn-outline">Explore Treatments <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <div class="hero-img-placeholder">
+          <img src="hero-patient.png" alt="Glowing skin client at GlowSkin" />
+          <div class="hero-badge">
+            <i class="fa-solid fa-star"></i>
+            <span>10,000+ Glowing Clients</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="pink-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Skin Rejuvenation</h3>
+        <p>Restore youthful radiance with our cutting-edge rejuvenation therapies and advanced serums.</p>
+      </div>
+      <div class="feature-card">
+        <div class="pink-icon"><i class="fa-solid fa-face-smile"></i></div>
+        <h3>Acne Treatment</h3>
+        <p>Clear breakouts and prevent scarring with our clinically proven acne management programs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="pink-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Laser Therapy</h3>
+        <p>State-of-the-art laser treatments for pigmentation, hair removal, and skin resurfacing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="pink-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Anti-Aging</h3>
+        <p>Turn back the clock with Botox, fillers, and collagen-boosting therapies tailored to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <div class="container why-inner">
+      <div class="why-img-placeholder">
+        <img src="about-clinic.png" alt="GlowSkin clinic interior" />
+      </div>
+      <div class="why-text">
+        <p class="section-label">WHY CHOOSE US</p>
+        <h2>Skin Care Backed by <span class="pink">Science</span></h2>
+        <p class="why-desc">At GlowSkin, every treatment is designed by certified dermatologists and delivered with the highest clinical standards. We combine medical expertise with a luxury spa experience to give your skin the care it deserves.</p>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-circle-check"></i> Board-certified dermatologists on-site</li>
+          <li><i class="fa-solid fa-circle-check"></i> FDA-approved treatments only</li>
+          <li><i class="fa-solid fa-circle-check"></i> Personalized skin analysis for every client</li>
+          <li><i class="fa-solid fa-circle-check"></i> Cruelty-free & clean skincare products</li>
+        </ul>
+        <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><h2>10K+</h2><p>Happy Clients</p></div>
+      <div class="stat"><h2>12+</h2><p>Years Experience</p></div>
+      <div class="stat"><h2>15+</h2><p>Expert Dermatologists</p></div>
+      <div class="stat"><h2>99%</h2><p>Satisfaction Rate</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label center">TESTIMONIALS</p>
+      <h2 class="center">What Our <span class="pink">Clients Say</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"After just 3 sessions of laser therapy, my skin looks completely transformed. The team is so professional and caring!"</p>
+          <div class="testimonial-author">
+            <div class="avatar">R</div>
+            <div><strong>Riya Kapoor</strong><br /><small>Laser Therapy Client</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"My acne was out of control for years. GlowSkin gave me back my confidence. Couldn't be happier with the results!"</p>
+          <div class="testimonial-author">
+            <div class="avatar">N</div>
+            <div><strong>Neha S.</strong><br /><small>Acne Treatment Client</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The anti-aging treatment is absolutely worth it. I look 10 years younger and the staff made me feel so comfortable."</p>
+          <div class="testimonial-author">
+            <div class="avatar">M</div>
+            <div><strong>Meera T.</strong><br /><small>Anti-Aging Client</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready for Your Skin Transformation?</h2>
+        <p>Book a free consultation and get a personalized skin analysis today.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+          <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+        </a>
+        <p>Advanced skin treatments and personalized care for healthy, glowing skin.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 45 Glow Avenue, Mumbai, MH</p>
+        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@glowskin.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GlowSkin Skin Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

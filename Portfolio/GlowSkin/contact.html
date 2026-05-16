@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — GlowSkin Skin Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+        <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">GET IN TOUCH</p>
+      <h1>Book Your <span class="pink">Consultation</span></h1>
+      <p class="sub">Ready to start your skin journey? Fill in the form and our team will get back to you within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- INFO -->
+      <div class="contact-info">
+        <div style="border-radius:20px;overflow:hidden;height:220px;margin-bottom:28px;">
+          <img src="receptionist.png" alt="GlowSkin reception" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+        <p class="section-label">CONTACT INFORMATION</p>
+        <h2>We're Here to <span class="pink">Help You</span></h2>
+        <p>Have a question about a treatment or want to schedule a visit? Reach out through any of the channels below.</p>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Our Location</h4>
+              <p>45 Glow Avenue, Bandra West<br />Mumbai, Maharashtra 400050</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4>Phone Number</h4>
+              <p>+91 98765 43210<br />Mon–Sat, 9am – 7pm</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email Address</h4>
+              <p>hello@glowskin.com<br />We reply within 24 hours</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Monday – Friday: 9am – 7pm<br />Saturday: 10am – 5pm<br />Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <p style="font-size:13px;font-weight:700;color:#4a3a4e;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Follow Us</p>
+          <div class="social-links" style="gap:10px;">
+            <a href="#" style="background:#fff5f8;color:#e8467c;width:42px;height:42px;border-radius:12px;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" style="background:#fff5f8;color:#e8467c;width:42px;height:42px;border-radius:12px;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="background:#fff5f8;color:#e8467c;width:42px;height:42px;border-radius:12px;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="background:#fff5f8;color:#e8467c;width:42px;height:42px;border-radius:12px;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form">
+        <h3>Book an Appointment</h3>
+        <div id="success-msg" style="display:none;background:#fde8f0;border:1px solid #f9a8c9;border-radius:12px;padding:14px 18px;font-size:14px;color:#9d174d;margin-bottom:20px;">
+          <i class="fa-solid fa-circle-check"></i> Thank you! We'll contact you shortly to confirm your appointment.
+        </div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="Priya" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Sharma" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="priya@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Treatment of Interest</label>
+            <select>
+              <option value="">Select a treatment...</option>
+              <option>Skin Rejuvenation</option>
+              <option>Acne Treatment</option>
+              <option>Laser Therapy</option>
+              <option>Anti-Aging (Botox/Fillers)</option>
+              <option>Hydra Facial</option>
+              <option>Pigmentation Control</option>
+              <option>PRP Therapy</option>
+              <option>Body Treatments</option>
+              <option>Sensitive Skin Care</option>
+              <option>General Consultation</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Date</label>
+              <input type="date" />
+            </div>
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <select>
+                <option value="">Select a time...</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tell Us About Your Skin Concern</label>
+            <textarea placeholder="Describe your main skin concerns, allergies, or anything you'd like us to know..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i class="fa-solid fa-calendar-check"></i> Confirm Appointment
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER -->
+  <section style="padding:0 0 60px;">
+    <div class="container">
+      <div style="border-radius:20px;overflow:hidden;height:300px;background:#fff5f8;display:flex;align-items:center;justify-content:center;border:1px solid #f5e6ee;">
+        <div style="text-align:center;">
+          <i class="fa-solid fa-map-location-dot" style="font-size:48px;color:#f9a8c9;margin-bottom:12px;display:block;"></i>
+          <p style="color:#7a6b7e;font-size:15px;">45 Glow Avenue, Bandra West, Mumbai, MH 400050</p>
+          <a href="#" style="font-size:14px;color:#e8467c;font-weight:600;margin-top:8px;display:inline-block;">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:0 0 80px;background:#fff9fb;">
+    <div class="container" style="padding-top:60px;">
+      <p class="section-label center">FAQ</p>
+      <h2 style="font-size:32px;font-weight:800;text-align:center;color:#1e1a2e;margin-bottom:36px;">Common <span class="pink">Questions</span></h2>
+      <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+        <details class="faq-item">
+          <summary>How many sessions will I need?</summary>
+          <p>The number of sessions varies by treatment and individual skin type. Our dermatologist will give you a clear plan during your initial consultation.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are the treatments safe for sensitive skin?</summary>
+          <p>Yes. We conduct a thorough skin analysis before every treatment and customize protocols to suit even the most reactive skin types.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is the first consultation really free?</summary>
+          <p>Absolutely. Your first consultation includes a full skin analysis at no charge. We believe in transparency before any commitment.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer payment plans?</summary>
+          <p>Yes, we offer flexible EMI options and package deals for multi-session treatments. Ask our front desk for details.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+          <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+        </a>
+        <p>Advanced skin treatments and personalized care for healthy, glowing skin.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 45 Glow Avenue, Mumbai, MH</p>
+        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@glowskin.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GlowSkin Skin Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('success-msg').style.display = 'block';
+      e.target.reset();
+      window.scrollTo({ top: document.querySelector('.contact-form').offsetTop - 80, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

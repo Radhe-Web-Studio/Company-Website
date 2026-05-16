@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — GlowSkin Skin Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+        <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">WHO WE ARE</p>
+      <h1>About <span class="pink">GlowSkin</span></h1>
+      <p class="sub">A team of passionate dermatologists and skin care specialists dedicated to helping you put your best face forward.</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="why" style="padding:80px 0;">
+    <div class="container why-inner">
+      <div class="why-img-placeholder" style="height:420px; position:relative;">
+        <img src="about-clinic.png" alt="GlowSkin clinic" />
+        <div style="position:absolute;bottom:20px;left:20px;background:#fff;border-radius:14px;padding:14px 20px;box-shadow:0 4px 20px rgba(232,70,124,0.15);text-align:center;">
+          <p style="font-size:28px;font-weight:800;color:#e8467c;margin:0;">Est. 2012</p>
+          <p style="font-size:13px;color:#7a6b7e;margin:0;">Glowing skin for 12+ years</p>
+        </div>
+      </div>
+      <div class="why-text">
+        <p class="section-label">OUR STORY</p>
+        <h2>Born from a Passion for <span class="pink">Healthy Skin</span></h2>
+        <p class="why-desc">GlowSkin was founded in 2012 by Dr. Ananya Mehta with one belief: everyone deserves healthy, confident skin. What began as a boutique dermatology practice has grown into a full-service skin clinic with 15+ specialists serving over 10,000 clients.</p>
+        <p class="why-desc">We blend clinical precision with a warm, welcoming environment — because great skin care is as much about how you feel as how you look.</p>
+        <ul class="why-list">
+          <li><i class="fa-solid fa-circle-check"></i> Founded by a board-certified dermatologist</li>
+          <li><i class="fa-solid fa-circle-check"></i> Clinic renovated with latest tech in 2024</li>
+          <li><i class="fa-solid fa-circle-check"></i> 100% cruelty-free & ethical treatments</li>
+          <li><i class="fa-solid fa-circle-check"></i> Ongoing research & clinical training</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><h2>10K+</h2><p>Happy Clients</p></div>
+      <div class="stat"><h2>12+</h2><p>Years Experience</p></div>
+      <div class="stat"><h2>15+</h2><p>Expert Dermatologists</p></div>
+      <div class="stat"><h2>99%</h2><p>Satisfaction Rate</p></div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section style="padding:80px 0;background:#fff9fb;">
+    <div class="container">
+      <p class="section-label center">WHAT DRIVES US</p>
+      <h2 style="font-size:36px;font-weight:800;color:#1e1a2e;text-align:center;margin-bottom:48px;">Our Mission & <span class="pink">Core Values</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;">
+        <div class="feature-card">
+          <div class="pink-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Client-First Care</h3>
+          <p>Every decision we make starts with your skin's health, comfort, and long-term wellbeing in mind.</p>
+        </div>
+        <div class="feature-card">
+          <div class="pink-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Science-Backed</h3>
+          <p>We use only clinically proven, FDA-approved treatments — no gimmicks, just real results.</p>
+        </div>
+        <div class="feature-card">
+          <div class="pink-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Clean & Ethical</h3>
+          <p>Cruelty-free products, sustainable practices, and a commitment to doing right by people and the planet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="padding:80px 0;background:#fff;">
+    <div class="container">
+      <p class="section-label center">MEET THE TEAM</p>
+      <h2 style="font-size:36px;font-weight:800;color:#1e1a2e;text-align:center;margin-bottom:48px;">The Experts Behind <span class="pink">Your Glow</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Dr. Ananya Mehta" /></div>
+          <h4>Dr. Ananya Mehta</h4>
+          <p>Founder & Lead Dermatologist</p>
+          <span>Anti-Aging & Skin Rejuvenation</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Dr. Rohan Verma" /></div>
+          <h4>Dr. Rohan Verma</h4>
+          <p>Laser Specialist</p>
+          <span>Laser & Pigmentation Therapy</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dr. Priya Nair" /></div>
+          <h4>Dr. Priya Nair</h4>
+          <p>Cosmetic Dermatologist</p>
+          <span>Botox, Fillers & PRP</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Dr. Karan Shah" /></div>
+          <h4>Dr. Karan Shah</h4>
+          <p>Trichologist</p>
+          <span>Hair & Scalp Specialist</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Come Experience the GlowSkin Difference</h2>
+        <p>Book a free consultation and let our experts design your perfect skin plan.</p>
+      </div>
+      <a href="contact.html" class="btn btn-white">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color:#fff">
+          <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+          <span class="logo-text">GlowSkin <small>SKIN CLINIC</small></span>
+        </a>
+        <p>Advanced skin treatments and personalized care for healthy, glowing skin.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 45 Glow Avenue, Mumbai, MH</p>
+        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@glowskin.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 GlowSkin Skin Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
